@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "G6rLaRaUfTIvAxCKd2iOOzByn0zDpvJffu6Sq6szt0YpzeCNtT/aHesj/0dBrfxQrMXOV1fCS9wX1A7IpRBGtQ==",
+  "success": true,
+  "projectFilePath": "G:\\Visual Studio repos\\repos\\Main\\Logic\\Logic.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\tubix\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\tubix\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
