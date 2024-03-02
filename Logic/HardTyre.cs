@@ -22,7 +22,7 @@ namespace Logic
 
         public override string TyreInfo()
         {
-            string info = $"Name: {Name}\nTread type: {Tread}\nConditions: {DrivingConditions}\nSpeed: {Speed}\nGrip: {Grip}\nDurability: {Durability}\nHard tyres are slowest and have least grip to the surface but they are certainly the most durable.";
+            string info = $"Name: {Name}\nTread type: {Tread}\nConditions: {DrivingConditions}\nSpeed: {Speed}\nGrip: {Grip}\nDurability: {Durability}\nHard tyres are slowest and have least grip to the surface but they are certainly the most durable. Use them for long races";
             return info;
         }
     }
