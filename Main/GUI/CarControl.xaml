@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="Main.CarControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Main"
+             mc:Ignorable="d" 
+             d:DesignHeight="440" d:DesignWidth="780"
+             Background="White">
+    <Grid>
+        <ComboBox x:Name="ComboBoxTyres" HorizontalAlignment="Left" Height="25" Margin="10,301,0,0" VerticalAlignment="Top" Width="100"/>
+        <TextBox x:Name="TextBoxNumber" HorizontalAlignment="Left" Height="25" Margin="10,130,0,0" TextWrapping="Wrap" Text="Number" VerticalAlignment="Top" Width="100"/>
+        <TextBox x:Name="TextBoxType" HorizontalAlignment="Left" Height="25" Margin="10,160,0,0" TextWrapping="Wrap" Text="Num" VerticalAlignment="Top" Width="30"/>
+        <ComboBox x:Name="ComboBoxEngine" HorizontalAlignment="Left" Height="25" Margin="115,301,0,0" VerticalAlignment="Top" Width="100"/>
+        <ComboBox x:Name="ComboBoxAerodynamics" HorizontalAlignment="Left" Height="25" Margin="220,301,0,0" VerticalAlignment="Top" Width="100"/>
+        <TextBox x:Name="TextBoxBrakes" HorizontalAlignment="Left" Height="24" Margin="10,258,0,0" TextWrapping="Wrap" Text="Brakes" VerticalAlignment="Top" Width="100"/>
+        <Button x:Name="ButtonBuild" Content="BUILD" HorizontalAlignment="Center" Height="40" Margin="0,390,0,0" VerticalAlignment="Top" Width="80" Click="ButtonBuild_Click"/>
+
+    </Grid>
+</UserControl>

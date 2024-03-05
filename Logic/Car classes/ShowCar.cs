@@ -9,7 +9,7 @@ namespace Logic
         public bool ForSale { get; set; }
         public string Advertiser { get; set; }
 
-        public ShowCar(int number, byte type, string aerodynamics, string engine, string tyres, string brakes, bool forSale, string advertiser)
+        public ShowCar(int number, byte type, string aerodynamics, string engine, string tyres, double brakes, bool forSale, string advertiser)
         {
             base.Number = number;
             base.Type = type;

@@ -55,6 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="GUI\CarControl.xaml.cs">
+      <DependentUpon>CarControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="GUI\DamagedCarControl.xaml.cs">
       <DependentUpon>DamagedCarControl.xaml</DependentUpon>
     </Compile>
@@ -64,6 +67,13 @@
     <Compile Include="GUI\ShowCarControl.xaml.cs">
       <DependentUpon>ShowCarControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="GUI\GarageWindow.xaml.cs">
+      <DependentUpon>GarageWindow.xaml</DependentUpon>
+    </Compile>
+    <Page Include="GUI\CarControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="GUI\DamagedCarControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -85,6 +95,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="GUI\ShowCarControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\GarageWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

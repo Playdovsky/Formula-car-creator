@@ -8,6 +8,16 @@
              d:DesignHeight="440" d:DesignWidth="780"
              Background="White">
     <Grid>
-            
+        <ComboBox x:Name="ComboBoxTyres" HorizontalAlignment="Left" Height="25" Margin="27,251,0,0" VerticalAlignment="Top" Width="100"/>
+        <TextBox x:Name="TextBoxNumber" HorizontalAlignment="Left" Height="25" Margin="27,80,0,0" TextWrapping="Wrap" Text="Number" VerticalAlignment="Top" Width="100"/>
+        <TextBox x:Name="TextBoxType" HorizontalAlignment="Left" Height="25" Margin="27,110,0,0" TextWrapping="Wrap" Text="Num" VerticalAlignment="Top" Width="30"/>
+        <ComboBox x:Name="ComboBoxEngine" HorizontalAlignment="Left" Height="25" Margin="132,251,0,0" VerticalAlignment="Top" Width="100"/>
+        <ComboBox x:Name="ComboBoxAerodynamics" HorizontalAlignment="Left" Height="25" Margin="237,251,0,0" VerticalAlignment="Top" Width="100"/>
+        <TextBox x:Name="TextBoxBrakes" HorizontalAlignment="Left" Height="24" Margin="27,0,0,0" TextWrapping="Wrap" Text="Brakes" VerticalAlignment="Center" Width="100"/>
+        <TextBox x:Name="TextBoxMaxSpeed" HorizontalAlignment="Left" Height="25" Margin="132,0,0,0" TextWrapping="Wrap" Text="Speed" VerticalAlignment="Center" Width="100"/>
+        <TextBox x:Name="TextBoxAcceleration" HorizontalAlignment="Left" Height="25" Margin="237,0,0,0" TextWrapping="Wrap" Text="Acceleration" VerticalAlignment="Center" Width="100"/>
+        <CheckBox x:Name="CheckBoxFIA" Content="Approved by FIA" HorizontalAlignment="Left" Height="21" Margin="342,211,0,0" VerticalAlignment="Top" Width="115"/>
+        <Button x:Name="ButtonBuild" Content="BUILD" HorizontalAlignment="Center" Height="40" Margin="0,390,0,0" VerticalAlignment="Top" Width="80" Click="ButtonBuild_Click"/>
+
     </Grid>
 </UserControl>

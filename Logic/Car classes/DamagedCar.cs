@@ -12,7 +12,7 @@ namespace Logic
         public string CanBeFixed { get; set; }
         public short RepairTime { get; set; }
 
-        public DamagedCar(int number, byte type, string aerodynamics, string engine, string tyres, string brakes, string reason, string damagedComponents, string canBeFixed, short repairTime) 
+        public DamagedCar(int number, byte type, string aerodynamics, string engine, string tyres, double brakes, string reason, string damagedComponents, string canBeFixed, short repairTime) 
         {
             base.Number = number;
             base.Type = type;

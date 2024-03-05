@@ -24,5 +24,10 @@ namespace Main
         {
             InitializeComponent();
         }
+
+        private void ButtonBuild_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

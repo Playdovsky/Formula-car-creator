@@ -10,7 +10,7 @@ namespace Logic
         public short Acceleration { get; set; }
         public bool ApprovedByFIA { get; set; }
 
-        public RaceCar(int number, byte type, string aerodynamics, string engine, string tyres, string brakes, short maxSpeed, short acceleration, bool approvedByFIA)
+        public RaceCar(int number, byte type, string aerodynamics, string engine, string tyres, double brakes, short maxSpeed, short acceleration, bool approvedByFIA)
         {
             base.Number = number;
             base.Type = type;

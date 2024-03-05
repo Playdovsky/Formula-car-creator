@@ -10,30 +10,27 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Logic;
 
 namespace Main
 {
-    public partial class MainWindow : Window
+    /// <summary>
+    /// Logika interakcji dla klasy Window1.xaml
+    /// </summary>
+    public partial class GarageWindow : Window
     {
-        public MainWindow()
+        private List<Car> cars;
+        public GarageWindow()
         {
             InitializeComponent();
-            InitializeContent();
+            LoadCars();
         }
 
-        private void InitializeContent()
+        private void LoadCars()
         {
-            CarControl carControl = new CarControl();
-            ContentControl.Content = carControl;
-        }
-
-        private void ButtonCarList_Click(object sender, RoutedEventArgs e)
-        {
-            GarageWindow garageWindow = new GarageWindow();
-            garageWindow.Show();
+            cars = Car.cars;
+            DataGridCars.ItemsSource = cars;
         }
     }
 }
