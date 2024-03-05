@@ -24,18 +24,15 @@ namespace Main
         public CarControl()
         {
             InitializeComponent();
-            ComboBoxAerodynamics.Items.Add("whateverAero");
-            ComboBoxEngine.Items.Add("whateverEngine");
-            ComboBoxTyres.Items.Add("whateverTyre");
         }
 
         private void ButtonBuild_Click(object sender, RoutedEventArgs e)
         {
             int number = int.Parse((TextBoxNumber.Text));
             byte type = byte.Parse((TextBoxType.Text));
-            string aerodynamics = ComboBoxAerodynamics.SelectedValue.ToString();
-            string engine = ComboBoxEngine.SelectedValue.ToString();
-            string tyres = ComboBoxTyres.SelectedValue.ToString();
+            string aerodynamics = ComboBoxAerodynamics.SelectionBoxItem.ToString();
+            string engine = ComboBoxEngine.SelectionBoxItem.ToString();
+            string tyres = ComboBoxTyres.SelectionBoxItem.ToString();
             double brakes = double.Parse((TextBoxBrakes.Text));
 
             Car car = new Car { Number = number, Type = type, Aerodynamics = aerodynamics, Brakes = brakes, Engine = engine, Tyres = tyres };

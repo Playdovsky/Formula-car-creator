@@ -8,16 +8,30 @@
              d:DesignHeight="440" d:DesignWidth="780"
              Background="White">
     <Grid>
-        <ComboBox x:Name="ComboBoxTyres" HorizontalAlignment="Left" Height="25" Margin="27,251,0,0" VerticalAlignment="Top" Width="100"/>
-        <TextBox x:Name="TextBoxNumber" HorizontalAlignment="Left" Height="25" Margin="27,80,0,0" TextWrapping="Wrap" Text="Number" VerticalAlignment="Top" Width="100"/>
-        <TextBox x:Name="TextBoxType" HorizontalAlignment="Left" Height="25" Margin="27,110,0,0" TextWrapping="Wrap" Text="Num" VerticalAlignment="Top" Width="30"/>
-        <ComboBox x:Name="ComboBoxEngine" HorizontalAlignment="Left" Height="25" Margin="132,251,0,0" VerticalAlignment="Top" Width="100"/>
-        <ComboBox x:Name="ComboBoxAerodynamics" HorizontalAlignment="Left" Height="25" Margin="237,251,0,0" VerticalAlignment="Top" Width="100"/>
-        <TextBox x:Name="TextBoxBrakes" HorizontalAlignment="Left" Height="24" Margin="27,0,0,0" TextWrapping="Wrap" Text="Brakes" VerticalAlignment="Center" Width="100"/>
-        <TextBox x:Name="TextBoxMaxSpeed" HorizontalAlignment="Left" Height="25" Margin="132,0,0,0" TextWrapping="Wrap" Text="Speed" VerticalAlignment="Center" Width="100"/>
-        <TextBox x:Name="TextBoxAcceleration" HorizontalAlignment="Left" Height="25" Margin="237,0,0,0" TextWrapping="Wrap" Text="Acceleration" VerticalAlignment="Center" Width="100"/>
-        <CheckBox x:Name="CheckBoxFIA" Content="Approved by FIA" HorizontalAlignment="Left" Height="21" Margin="342,211,0,0" VerticalAlignment="Top" Width="115"/>
+        <ComboBox x:Name="ComboBoxTyres" HorizontalAlignment="Left" Height="25" Margin="10,301,0,0" VerticalAlignment="Top" Width="100">
+            <ComboBoxItem Content="Hard (white)"></ComboBoxItem>
+            <ComboBoxItem Content="Medium (yellow)"></ComboBoxItem>
+            <ComboBoxItem Content="Soft (red)"></ComboBoxItem>
+            <ComboBoxItem Content="Intermediate (green)"></ComboBoxItem>
+            <ComboBoxItem Content="Wet (blue)"></ComboBoxItem>
+        </ComboBox>
+        <TextBox x:Name="TextBoxNumber" HorizontalAlignment="Left" Height="25" Margin="10,130,0,0" TextWrapping="Wrap" Text="Number" VerticalAlignment="Top" Width="100"/>
+        <TextBox x:Name="TextBoxType" HorizontalAlignment="Left" Height="25" Margin="10,160,0,0" TextWrapping="Wrap" Text="Num" VerticalAlignment="Top" Width="30"/>
+        <ComboBox x:Name="ComboBoxEngine" HorizontalAlignment="Left" Height="25" Margin="115,301,0,0" VerticalAlignment="Top" Width="100">
+            <ComboBoxItem Content="Mercedes-Benz V6 hybrid turbocharger, 850+160hp"></ComboBoxItem>
+            <ComboBoxItem Content="Ferrari V6 hybrid turbocharger, 850+160hp"></ComboBoxItem>
+            <ComboBoxItem Content="Renault V6 hybrid turbocharger, 825+150hp"></ComboBoxItem>
+            <ComboBoxItem Content="Renault V6 hybrid turbocharger, 800+100hp"></ComboBoxItem>
+            <ComboBoxItem Content="Honda V6 hybrid turbocharger, 800+130hp"></ComboBoxItem>
+            <ComboBoxItem Content="Honda V6 hybrid turbocharger, 750+150hp"></ComboBoxItem>
+            <ComboBoxItem Content="Honda V6 hybrid turbocharger, 700+50hp"></ComboBoxItem>
+        </ComboBox>
+        <ComboBox x:Name="ComboBoxAerodynamics" HorizontalAlignment="Left" Height="25" Margin="220,301,0,0" VerticalAlignment="Top" Width="100">
+            <ComboBoxItem Content="Wings, spoiler, lightweight compounds, DRS"></ComboBoxItem>
+            <ComboBoxItem Content="Wings, spoiler, DRS"></ComboBoxItem>
+            <ComboBoxItem Content="Wings, spoiler"></ComboBoxItem>
+        </ComboBox>
+        <TextBox x:Name="TextBoxBrakes" HorizontalAlignment="Left" Height="24" Margin="10,258,0,0" TextWrapping="Wrap" Text="Brakes" VerticalAlignment="Top" Width="100"/>
         <Button x:Name="ButtonBuild" Content="BUILD" HorizontalAlignment="Center" Height="40" Margin="0,390,0,0" VerticalAlignment="Top" Width="80" Click="ButtonBuild_Click"/>
-
     </Grid>
 </UserControl>
