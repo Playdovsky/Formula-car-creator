@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Logic;
 
 namespace Main
 {
@@ -22,6 +23,9 @@ namespace Main
             InitializeComponent();
         }
 
+        private void ButtonBuild_Click(object sender, RoutedEventArgs e)
+        {
 
+        }
     }
 }
