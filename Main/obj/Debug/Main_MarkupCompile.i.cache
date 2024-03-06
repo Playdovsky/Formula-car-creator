@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Main\App\App.xaml
-61943381969
+41099280363
 
-11-1496161136
+9-86600486
 15-878510392
-GUI\CarControl.xaml;GUI\DamagedCarControl.xaml;GUI\MainWindow.xaml;GUI\RaceCarControl.xaml;GUI\ShowCarControl.xaml;GUI\GarageWindow.xaml;
+GUI\CarControl.xaml;GUI\MainWindow.xaml;GUI\RaceCarControl.xaml;GUI\GarageWindow.xaml;
 
-True
+False
 

@@ -13,14 +13,10 @@ C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Main\obj\Debug\Ma
 C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Main\obj\Debug\Main.csproj.CopyComplete
 C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Main\obj\Debug\Main.exe
 C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Main\obj\Debug\Main.pdb
-C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Main\obj\Debug\GUI\DamagedCarControl.g.cs
 C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Main\obj\Debug\GUI\MainWindow.g.cs
 C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Main\obj\Debug\GUI\RaceCarControl.g.cs
-C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Main\obj\Debug\GUI\ShowCarControl.g.cs
-C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Main\obj\Debug\GUI\DamagedCarControl.baml
 C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Main\obj\Debug\GUI\MainWindow.baml
 C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Main\obj\Debug\GUI\RaceCarControl.baml
-C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Main\obj\Debug\GUI\ShowCarControl.baml
 C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Main\obj\Debug\App\App.g.cs
 C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Main\obj\Debug\GUI\GarageWindow.g.cs
 C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Main\obj\Debug\GUI\GarageWindow.baml

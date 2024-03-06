@@ -5,8 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Main"
         mc:Ignorable="d"
-        Title="Window1" Height="450" Width="450">
-    <Grid>
-        <DataGrid x:Name="DataGridCars" HorizontalAlignment="Center" Height="414" VerticalAlignment="Center" Width="430" d:ItemsSource="{d:SampleData ItemCount=5}" IsReadOnly="True" SelectionMode="Single"/>
+        Title="Garage" Height="340" Width="462">
+    <Grid Margin="0,0,10,0">
+        <DataGrid x:Name="DataGridCars" HorizontalAlignment="Center" Height="285" VerticalAlignment="Top" Width="432" d:ItemsSource="{d:SampleData ItemCount=5}" IsReadOnly="True" SelectionMode="Single" MouseDoubleClick="DataGridCars_MouseDoubleClick" Margin="0,10,0,0" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Unqiue number" Binding="{Binding Number}"/>
+                <DataGridTextColumn Header="Formula" Binding="{Binding Type}"/>
+                <DataGridTextColumn Header="Engine" Binding="{Binding Engine}"/>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Window>

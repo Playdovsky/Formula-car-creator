@@ -18,6 +18,8 @@ namespace Main
 {
     public partial class MainWindow : Window
     {
+        private bool basicCar;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -28,6 +30,7 @@ namespace Main
         {
             CarControl carControl = new CarControl();
             ContentControl.Content = carControl;
+            basicCar = true;
         }
 
         private void ButtonCarList_Click(object sender, RoutedEventArgs e)
@@ -38,8 +41,16 @@ namespace Main
 
         private void ButtonCarType_Click(object sender, RoutedEventArgs e)
         {
-            RaceCarControl raceCarControl = new RaceCarControl();
-            ContentControl.Content = raceCarControl;
+            if (basicCar)
+            {
+                RaceCarControl raceCarControl = new RaceCarControl();
+                ContentControl.Content = raceCarControl;
+                basicCar = false;
+            }
+            else
+            {
+                InitializeContent();
+            }
         }
     }
 }

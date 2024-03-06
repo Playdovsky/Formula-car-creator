@@ -32,5 +32,11 @@ namespace Main
             cars = Car.cars;
             DataGridCars.ItemsSource = cars;
         }
+
+        private void DataGridCars_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            Car selectedCar = (Car)DataGridCars.SelectedItem;
+            MessageBox.Show(selectedCar.CarInfo());
+        }
     }
 }

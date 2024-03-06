@@ -23,5 +23,22 @@ namespace Logic
             Acceleration = acceleration;
             ApprovedByFIA = approvedByFIA;
         }
+
+        public override string CarInfo()
+        {
+            string info = $"F1 car - race version\nmade specifically for racing in formula competition" +
+                $"\n_________________________________________________________________________" +
+                $"\n\nNumber: {Number}" +
+                $"\nType: F{Type}" +
+                $"\nApproved by FIA: {ApprovedByFIA}" +
+                $"\n\nMax speed: {MaxSpeed}km/h" +
+                $"\nAcceleration (0-100km): {Acceleration}s" +
+                $"\nBrakes balance: {BrakesBalance}%" +
+                $"\n\nAerodynamics: {Aerodynamics}" +
+                $"\nEngine: {Engine}" +
+                $"\nTyres: {Tyres}";
+
+            return info;
+        }
     }
 }

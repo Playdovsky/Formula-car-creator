@@ -8,9 +8,9 @@
              d:DesignHeight="440" d:DesignWidth="780"
              Background="White">
     <Grid>
-        <TextBox x:Name="TextBoxBrakes" HorizontalAlignment="Left" Height="24" Margin="720,92,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50"/>
-        <TextBox x:Name="TextBoxMaxSpeed" HorizontalAlignment="Left" Height="26" Margin="720,32,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50"/>
-        <TextBox x:Name="TextBoxAcceleration" HorizontalAlignment="Left" Height="24" Margin="720,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50"/>
+        <TextBox x:Name="TextBoxBrakes" HorizontalAlignment="Left" Height="24" Margin="730,92,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" MaxLength="4"/>
+        <TextBox x:Name="TextBoxMaxSpeed" HorizontalAlignment="Left" Height="26" Margin="730,32,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" MaxLength="3"/>
+        <TextBox x:Name="TextBoxAcceleration" HorizontalAlignment="Left" Height="24" Margin="730,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" MaxLength="3"/>
         <CheckBox x:Name="CheckBoxFIA" Content="Approved by FIA" HorizontalAlignment="Left" Height="23" Margin="2,98,0,0" VerticalAlignment="Top" Width="120"/>
         <ComboBox x:Name="ComboBoxTyres" HorizontalAlignment="Left" Height="25" Margin="68,366,0,0" VerticalAlignment="Top" Width="120">
             <ComboBoxItem Content="Hard (white)"/>
@@ -19,34 +19,42 @@
             <ComboBoxItem Content="Intermediate (green)"/>
             <ComboBoxItem Content="Wet (blue)"/>
         </ComboBox>
-        <TextBox x:Name="TextBoxNumber" HorizontalAlignment="Left" Height="24" Margin="102,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" RenderTransformOrigin="0.502,0.578"/>
-        <TextBox x:Name="TextBoxType" HorizontalAlignment="Left" Height="24" Margin="102,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="20"/>
+        <TextBox x:Name="TextBoxNumber" HorizontalAlignment="Left" Height="24" Margin="102,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" RenderTransformOrigin="0.502,0.578" MaxLength="5"/>
+        <TextBox x:Name="TextBoxType" HorizontalAlignment="Left" Height="24" Margin="102,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="15" MaxLength="1"/>
         <ComboBox x:Name="ComboBoxEngine" HorizontalAlignment="Left" Height="26" Margin="554,350,0,0" VerticalAlignment="Top" Width="200">
-            <ComboBoxItem Content="Mercedes-Benz V6 hybrid turbocharger, 850+160hp"/>
-            <ComboBoxItem Content="Ferrari V6 hybrid turbocharger, 850+160hp"/>
-            <ComboBoxItem Content="Renault V6 hybrid turbocharger, 825+150hp"/>
-            <ComboBoxItem Content="Renault V6 hybrid turbocharger, 800+100hp"/>
-            <ComboBoxItem Content="Honda V6 hybrid turbocharger, 800+130hp"/>
-            <ComboBoxItem Content="Honda V6 hybrid turbocharger, 750+150hp"/>
-            <ComboBoxItem Content="Honda V6 hybrid turbocharger, 700+50hp"/>
+            <ComboBoxItem Content="Mercedes-Benz V6 hybrid turbocharger, 850+160hp"></ComboBoxItem>
+            <ComboBoxItem Content="Red Bull V6 hybrid turbocharger, 880+110hp"></ComboBoxItem>
+            <ComboBoxItem Content="Ferrari V6 hybrid turbocharger, 850+160hp"></ComboBoxItem>
+            <ComboBoxItem Content="Renault V6 hybrid turbocharger, 825+150hp"></ComboBoxItem>
+            <ComboBoxItem Content="Renault V6 hybrid turbocharger, 800+100hp"></ComboBoxItem>
+            <ComboBoxItem Content="Aston Martin V6 hybrid turbocharger, 820+110hp"></ComboBoxItem>
+            <ComboBoxItem Content="AlphaTauri V6 hybrid turbocharger, 810+100hp"></ComboBoxItem>
+            <ComboBoxItem Content="Alfa Romeo V6 hybrid turbocharger, 760+70hp"></ComboBoxItem>
+            <ComboBoxItem Content="Alpine V6 hybrid turbocharger, 750+80hp"></ComboBoxItem>
+            <ComboBoxItem Content="Williams V6 hybrid turbocharger, 790+95hp"></ComboBoxItem>
+            <ComboBoxItem Content="Haas V6 hybrid turbocharger, 780+95hp"></ComboBoxItem>
+            <ComboBoxItem Content="Honda V6 hybrid turbocharger, 800+130hp"></ComboBoxItem>
+            <ComboBoxItem Content="Honda V6 hybrid turbocharger, 750+150hp"></ComboBoxItem>
+            <ComboBoxItem Content="Honda V6 hybrid turbocharger, 700+50hp"></ComboBoxItem>
         </ComboBox>
         <ComboBox x:Name="ComboBoxAerodynamics" HorizontalAlignment="Left" Height="25" Margin="198,95,0,0" VerticalAlignment="Top" Width="220" RenderTransformOrigin="0.378,0.58">
-            <ComboBoxItem Content="Wings, spoiler, lightweight compounds, DRS"/>
-            <ComboBoxItem Content="Wings, spoiler, DRS"/>
+            <ComboBoxItem Content="Wings, spoiler, diffuser, lightweight compounds, DRS"/>
+            <ComboBoxItem Content="Wings, spoiler, diffuser, lightweight compounds"/>
+            <ComboBoxItem Content="Wings, spoiler, diffuser"/>
             <ComboBoxItem Content="Wings, spoiler"/>
         </ComboBox>
-        <Button x:Name="ButtonBuild" Content="BUILD" HorizontalAlignment="Center" Height="40" Margin="0,378,0,0" VerticalAlignment="Top" Width="80" Click="ButtonBuild_Click"/>
-        <Label x:Name="LabelRaceCarControlHeader" Content="RACE F1 CAR" HorizontalAlignment="Left" Margin="2,2,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <Label Content="car number" Margin="2,30,678,380"/>
-        <Label Content="type" Margin="2,65,678,345"/>
-        <Label Content="F" HorizontalAlignment="Left" Margin="86,67,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="ButtonBuild" Content="BUILD" HorizontalAlignment="Center" Height="40" Margin="0,378,0,0" VerticalAlignment="Top" Width="80" Click="ButtonBuild_Click" FontWeight="Bold"/>
+        <Label x:Name="LabelRaceCarControlHeader" Content="F1 CAR - FOR RACE" HorizontalAlignment="Left" Margin="2,2,0,0" VerticalAlignment="Top" FontWeight="Bold" FontStyle="Italic"/>
+        <Label Content="Unique number" Margin="2,30,678,380"/>
+        <Label Content="Formula type" Margin="2,65,678,345"/>
+        <Label Content="F" HorizontalAlignment="Left" Margin="86,65,0,0" VerticalAlignment="Top"/>
         <Image Margin="40,140,40,130" Source="/GUI/f3_side.png"/>
         <Line X1="50" Y1="50" X2="-50" Y2="200" Stroke="Red" StrokeThickness="1" Margin="140,240,226,0"/>
         <Line X1="50" Y1="50" X2="200" Y2="200" Stroke="Red" StrokeThickness="1" Margin="464,158,-46,90"/>
         <Line X1="50" Y1="-100" X2="-120" Y2="50" Stroke="Red" StrokeThickness="1" Margin="208,220,400,-113" RenderTransformOrigin="0.687,0.43"/>
         <Line X1="590" Y1="100" X2="1000" Y2="200" Stroke="Red" StrokeThickness="1" Margin="-232,20,56,126" />
-        <Label x:Name="LabelMaxSpeed" Content="max speed (km/h)" Margin="584,30,65,380"/>
-        <Label x:Name="LabelAcceleration" Content="acceleration (0-100km)" Margin="584,60,65,350"/>
-        <Label x:Name="LabelBrakes" Content="brakes balance" Margin="584,89,65,321"/>
+        <Label x:Name="LabelMaxSpeed" Content="Max speed (km/h)" Margin="594,30,50,380"/>
+        <Label x:Name="LabelAcceleration" Content="Acceleration (0-100km)" Margin="594,60,50,350"/>
+        <Label x:Name="LabelBrakes" Content="Brakes balance (in %)" Margin="594,89,50,321"/>
     </Grid>
 </UserControl>
