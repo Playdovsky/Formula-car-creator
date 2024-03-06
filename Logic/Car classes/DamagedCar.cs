@@ -19,7 +19,6 @@ namespace Logic
             base.Aerodynamics = aerodynamics;
             base.Engine = engine;
             base.Tyres = tyres;
-            base.Brakes = brakes;
             Reason = reason;
             DamagedComponents = damagedComponents;
             CanBeFixed = canBeFixed;

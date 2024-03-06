@@ -135,5 +135,11 @@
       <Name>Logic</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\f3_side.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="GUI\f3_side.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

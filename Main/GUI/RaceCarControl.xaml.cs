@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Logic;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,7 +28,18 @@ namespace Main
 
         private void ButtonBuild_Click(object sender, RoutedEventArgs e)
         {
+            int number = int.Parse(TextBoxNumber.Text);
+            byte type = byte.Parse(TextBoxType.Text);
+            string aerodynamics = ComboBoxAerodynamics.SelectionBoxItem.ToString();
+            string engine = ComboBoxEngine.SelectionBoxItem.ToString();
+            string tyres = ComboBoxTyres.SelectionBoxItem.ToString();
+            double brakes = double.Parse(TextBoxBrakes.Text);
+            short maxSpeed = short.Parse(TextBoxMaxSpeed.Text);
+            double acceleration = double.Parse(TextBoxAcceleration.Text);
+            bool fia = CheckBoxFIA.IsChecked.Value;
 
+            RaceCar raceCar = new RaceCar(number, type, aerodynamics, engine, tyres, brakes, maxSpeed, acceleration, fia);
+            Car.cars.Add(raceCar);
         }
     }
 }

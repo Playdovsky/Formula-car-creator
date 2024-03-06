@@ -8,16 +8,16 @@
              d:DesignHeight="440" d:DesignWidth="780"
              Background="White">
     <Grid>
-        <ComboBox x:Name="ComboBoxTyres" HorizontalAlignment="Left" Height="25" Margin="10,301,0,0" VerticalAlignment="Top" Width="100">
+        <ComboBox x:Name="ComboBoxTyres" HorizontalAlignment="Left" Height="25" Margin="68,366,0,0" VerticalAlignment="Top" Width="120">
             <ComboBoxItem Content="Hard (white)"></ComboBoxItem>
             <ComboBoxItem Content="Medium (yellow)"></ComboBoxItem>
             <ComboBoxItem Content="Soft (red)"></ComboBoxItem>
             <ComboBoxItem Content="Intermediate (green)"></ComboBoxItem>
             <ComboBoxItem Content="Wet (blue)"></ComboBoxItem>
         </ComboBox>
-        <TextBox x:Name="TextBoxNumber" HorizontalAlignment="Left" Height="24" Margin="10,178,0,0" TextWrapping="Wrap" Text="Number" VerticalAlignment="Top" Width="100"/>
-        <TextBox x:Name="TextBoxType" HorizontalAlignment="Left" Height="24" Margin="10,0,0,0" TextWrapping="Wrap" Text="Num" VerticalAlignment="Center" Width="30"/>
-        <ComboBox x:Name="ComboBoxEngine" HorizontalAlignment="Left" Height="25" Margin="115,301,0,0" VerticalAlignment="Top" Width="100">
+        <TextBox x:Name="TextBoxNumber" HorizontalAlignment="Left" Height="24" Margin="102,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" RenderTransformOrigin="0.502,0.578"/>
+        <TextBox x:Name="TextBoxType" HorizontalAlignment="Left" Height="24" Margin="102,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="20"/>
+        <ComboBox x:Name="ComboBoxEngine" HorizontalAlignment="Left" Height="26" Margin="554,350,0,0" VerticalAlignment="Top" Width="200">
             <ComboBoxItem Content="Mercedes-Benz V6 hybrid turbocharger, 850+160hp"></ComboBoxItem>
             <ComboBoxItem Content="Ferrari V6 hybrid turbocharger, 850+160hp"></ComboBoxItem>
             <ComboBoxItem Content="Renault V6 hybrid turbocharger, 825+150hp"></ComboBoxItem>
@@ -26,13 +26,20 @@
             <ComboBoxItem Content="Honda V6 hybrid turbocharger, 750+150hp"></ComboBoxItem>
             <ComboBoxItem Content="Honda V6 hybrid turbocharger, 700+50hp"></ComboBoxItem>
         </ComboBox>
-        <ComboBox x:Name="ComboBoxAerodynamics" HorizontalAlignment="Left" Height="25" Margin="220,301,0,0" VerticalAlignment="Top" Width="100">
+        <ComboBox x:Name="ComboBoxAerodynamics" HorizontalAlignment="Left" Height="25" Margin="198,95,0,0" VerticalAlignment="Top" Width="220" RenderTransformOrigin="0.378,0.58">
             <ComboBoxItem Content="Wings, spoiler, lightweight compounds, DRS"></ComboBoxItem>
             <ComboBoxItem Content="Wings, spoiler, DRS"></ComboBoxItem>
             <ComboBoxItem Content="Wings, spoiler"></ComboBoxItem>
         </ComboBox>
-        <TextBox x:Name="TextBoxBrakes" HorizontalAlignment="Left" Height="24" Margin="10,258,0,0" TextWrapping="Wrap" Text="Brakes" VerticalAlignment="Top" Width="100"/>
-        <Button x:Name="ButtonBuild" Content="BUILD" HorizontalAlignment="Center" Height="40" Margin="0,390,0,0" VerticalAlignment="Top" Width="80" Click="ButtonBuild_Click"/>
-        <Label x:Name="LabelCarControlHeader" Content="REGULAR F1 CAR" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="ButtonBuild" Content="BUILD" HorizontalAlignment="Center" Height="40" Margin="0,378,0,0" VerticalAlignment="Top" Width="80" Click="ButtonBuild_Click"/>
+        <Label x:Name="LabelCarControlHeader" Content="REGULAR F1 CAR" HorizontalAlignment="Left" Margin="2,2,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="car number" Margin="2,30,678,380"/>
+        <Label Content="type" Margin="2,65,678,345"/>
+        <Label Content="F" HorizontalAlignment="Left" Margin="86,67,0,0" VerticalAlignment="Top"/>
+        <Image Margin="40,140,40,130" Source="/GUI/f3_side.png"/>
+        <Line X1="50" Y1="50" X2="-50" Y2="200" Stroke="Red" StrokeThickness="1" Margin="140,240,226,0"/>
+        <Line X1="50" Y1="50" X2="200" Y2="200" Stroke="Red" StrokeThickness="1" Margin="464,158,-46,90"/>
+        <Line X1="50" Y1="-100" X2="-120" Y2="50" Stroke="Red" StrokeThickness="1" Margin="208,220,400,-113" RenderTransformOrigin="0.687,0.43"/>
+        <Line X1="590" Y1="100" X2="1000" Y2="200" Stroke="Red" StrokeThickness="1" Margin="-232,20,56,126" />
     </Grid>
 </UserControl>

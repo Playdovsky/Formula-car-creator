@@ -16,7 +16,6 @@ namespace Logic
             base.Aerodynamics = aerodynamics;
             base.Engine = engine;
             base.Tyres = tyres;
-            base.Brakes = brakes;
             ForSale = forSale;
             Advertiser = advertiser;
         }

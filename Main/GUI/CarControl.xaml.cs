@@ -33,9 +33,8 @@ namespace Main
             string aerodynamics = ComboBoxAerodynamics.SelectionBoxItem.ToString();
             string engine = ComboBoxEngine.SelectionBoxItem.ToString();
             string tyres = ComboBoxTyres.SelectionBoxItem.ToString();
-            double brakes = double.Parse((TextBoxBrakes.Text));
 
-            Car car = new Car { Number = number, Type = type, Aerodynamics = aerodynamics, Brakes = brakes, Engine = engine, Tyres = tyres };
+            Car car = new Car { Number = number, Type = type, Aerodynamics = aerodynamics, Engine = engine, Tyres = tyres };
             Car.cars.Add(car);
         }
     }

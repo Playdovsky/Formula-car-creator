@@ -35,5 +35,11 @@ namespace Main
             GarageWindow garageWindow = new GarageWindow();
             garageWindow.Show();
         }
+
+        private void ButtonCarType_Click(object sender, RoutedEventArgs e)
+        {
+            RaceCarControl raceCarControl = new RaceCarControl();
+            ContentControl.Content = raceCarControl;
+        }
     }
 }
