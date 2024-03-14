@@ -55,14 +55,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="GUI\ConversionWindow.xaml.cs">
-      <DependentUpon>ConversionWindow.xaml</DependentUpon>
+    <Compile Include="GUI\DamageConversionWindow.xaml.cs">
+      <DependentUpon>DamageConversionWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="GUI\CarControl.xaml.cs">
       <DependentUpon>CarControl.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\DamagedControl.xaml.cs">
-      <DependentUpon>DamagedControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="GUI\RaceCarControl.xaml.cs">
       <DependentUpon>RaceCarControl.xaml</DependentUpon>
@@ -70,15 +67,11 @@
     <Compile Include="GUI\GarageWindow.xaml.cs">
       <DependentUpon>GarageWindow.xaml</DependentUpon>
     </Compile>
-    <Page Include="GUI\ConversionWindow.xaml">
+    <Page Include="GUI\DamageConversionWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="GUI\CarControl.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="GUI\DamagedControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

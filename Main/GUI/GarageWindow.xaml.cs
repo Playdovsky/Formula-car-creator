@@ -15,9 +15,6 @@ using Logic;
 
 namespace Main
 {
-    /// <summary>
-    /// Logika interakcji dla klasy Window1.xaml
-    /// </summary>
     public partial class GarageWindow : Window
     {
         private List<Car> cars;
@@ -56,11 +53,16 @@ namespace Main
             }
         }
 
-        private void ButtonConvert_Click(object sender, RoutedEventArgs e)
+        private void ButtonConvertDamaged_Click(object sender, RoutedEventArgs e)
         {
             try
             {
                 Car selectedCar = (Car)DataGridCars.SelectedItem;
+
+                if(selectedCar is null)
+                {
+                    throw new ArgumentNullException(nameof(selectedCar));
+                }
 
                 int number = selectedCar.Number;
                 byte type = selectedCar.Type;
@@ -68,19 +70,25 @@ namespace Main
                 string engine = selectedCar.Engine;
                 string tyres = selectedCar.Tyres;
 
-                ConversionWindow conversionWindow = new ConversionWindow(number, type, aerodynamics, engine, tyres);
+                DamageConversionWindow conversionWindow = new DamageConversionWindow(number, type, aerodynamics, engine, tyres);
                 conversionWindow.Show();
                 cars.Remove(selectedCar);
             }
-            catch (Exception)
+            catch (ArgumentNullException)
             {
                 MessageBox.Show("Please select the car you want to convert.");
             }
+        }
+
+        private void ButtonConvertShow_Click(object sender, RoutedEventArgs e)
+        {
+
         }
 
         private void ButtonRefresh_Click(object sender, RoutedEventArgs e)
         {
             LoadCars();
         }
+
     }
 }

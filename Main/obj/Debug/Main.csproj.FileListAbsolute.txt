@@ -22,7 +22,5 @@ C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Main\obj\Debug\GU
 C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Main\obj\Debug\GUI\GarageWindow.baml
 C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Main\obj\Debug\GUI\CarControl.g.cs
 C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Main\obj\Debug\GUI\CarControl.baml
-C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Main\obj\Debug\GUI\ConversionWindow.g.cs
-C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Main\obj\Debug\GUI\DamagedControl.g.cs
-C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Main\obj\Debug\GUI\ConversionWindow.baml
-C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Main\obj\Debug\GUI\DamagedControl.baml
+C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Main\obj\Debug\GUI\DamageConversionWindow.g.cs
+C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Main\obj\Debug\GUI\DamageConversionWindow.baml

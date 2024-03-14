@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -11,12 +12,11 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Main.GUI
+namespace Main
 {
-    public partial class DamagedControl : UserControl
+    public partial class DamageConversionWindow : Window
     {
         private int Number { get; set; }
         private byte Type { get; set; }
@@ -24,10 +24,9 @@ namespace Main.GUI
         private string Engine { get; set; }
         private string Tyres { get; set; }
 
-        public DamagedControl(int number, byte type, string aerodynamics, string engine, string tyres)
+        public DamageConversionWindow(int number, byte type, string aerodynamics, string engine, string tyres)
         {
             InitializeComponent();
-
             Number = number;
             Type = type;
             Aerodynamics = aerodynamics;
@@ -41,8 +40,8 @@ namespace Main.GUI
             string damagedComponents = TextBoxDamagedComponents.Text;
             bool canBeFixed = CheckBoxCanBeFixed.IsChecked.Value;
             string repairTime = TextBoxRepairTime.Text;
-            
-            if(repairTime == "")
+
+            if (repairTime == "")
             {
                 repairTime = "cannot be repaired";
             }
