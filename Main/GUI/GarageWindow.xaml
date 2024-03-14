@@ -5,14 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Main"
         mc:Ignorable="d"
-        Title="Garage" Height="340" Width="462">
-    <Grid Margin="0,0,10,0">
-        <DataGrid x:Name="DataGridCars" HorizontalAlignment="Center" Height="285" VerticalAlignment="Top" Width="432" d:ItemsSource="{d:SampleData ItemCount=5}" IsReadOnly="True" SelectionMode="Single" MouseDoubleClick="DataGridCars_MouseDoubleClick" Margin="0,10,0,0" AutoGenerateColumns="False">
+        Title="Garage" Height="345" Width="623">
+    <Grid Margin="0,0,0,-6">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="16*"/>
+            <RowDefinition Height="319*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="465*"/>
+            <ColumnDefinition Width="158*"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid x:Name="DataGridCars" HorizontalAlignment="Center" Height="285" VerticalAlignment="Top" Width="432" d:ItemsSource="{d:SampleData ItemCount=5}" IsReadOnly="True" SelectionMode="Single" MouseDoubleClick="DataGridCars_MouseDoubleClick" AutoGenerateColumns="False" HorizontalScrollBarVisibility="Disabled" Margin="0,1,0,0" Grid.Row="1">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Unqiue number" Binding="{Binding Number}"/>
                 <DataGridTextColumn Header="Formula" Binding="{Binding Type}"/>
                 <DataGridTextColumn Header="Engine" Binding="{Binding Engine}"/>
             </DataGrid.Columns>
         </DataGrid>
+        <Button x:Name="ButtonEdit" Content="Edit" Height="30" Margin="10,44,10,0" VerticalAlignment="Top" Padding="0" Grid.Column="1" Grid.Row="1"/>
+        <Button x:Name="ButtonConvert" Content="Damaged" Margin="10,152,10,0" Padding="0" VerticalAlignment="Top" Height="30" Grid.Column="1" Grid.Row="1" IsCancel="True" Click="ButtonConvert_Click"/>
+        <Button x:Name="ButtonDelete" Content="Delete" Margin="10,79,10,0" Grid.Row="1" VerticalAlignment="Top" Grid.Column="1" Height="30" Click="ButtonDelete_Click"/>
+        <Label x:Name="LabelConvert" Content="Convert to..." Margin="0,116,0,0" Grid.Row="1" Grid.Column="1" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Label x:Name="LabelOptions" Grid.Column="1" Content="Options" HorizontalAlignment="Center" Margin="0,10,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
+        <Button x:Name="ButtonRefresh" Grid.Column="1" Content="Refresh" HorizontalAlignment="Center" Margin="0,256,0,0" Grid.Row="1" VerticalAlignment="Top" Width="138" Height="30" Click="ButtonRefresh_Click"/>
     </Grid>
 </Window>

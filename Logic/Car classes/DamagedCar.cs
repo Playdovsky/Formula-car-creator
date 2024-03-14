@@ -9,10 +9,10 @@ namespace Logic
     {
         public string Reason { get; set; }
         public string DamagedComponents { get; set; }
-        public string CanBeFixed { get; set; }
-        public short RepairTime { get; set; }
+        public bool CanBeFixed { get; set; }
+        public string RepairTime { get; set; }
 
-        public DamagedCar(int number, byte type, string aerodynamics, string engine, string tyres, double brakes, string reason, string damagedComponents, string canBeFixed, short repairTime) 
+        public DamagedCar(int number, byte type, string aerodynamics, string engine, string tyres, string reason, string damagedComponents, bool canBeFixed, string repairTime) 
         {
             base.Number = number;
             base.Type = type;
@@ -23,6 +23,23 @@ namespace Logic
             DamagedComponents = damagedComponents;
             CanBeFixed = canBeFixed;
             RepairTime = repairTime;
+        }
+
+        public override string CarInfo()
+        {
+            string info = $"F1 car - damaged version\ndamaged car designated for repairs or disassemble" +
+                $"\n_________________________________________________________________________" +
+                $"\n\nNumber: {Number}" +
+                $"\nType: F{Type}" +
+                $"\n\nWhy was damaged: {Reason}" +
+                $"\nDamaged components: {DamagedComponents}" +
+                $"\nCan be fixed: {CanBeFixed}" +
+                $"\nRepair time: {RepairTime}" +
+                $"\n\nAerodynamics: {Aerodynamics}" +
+                $"\nEngine: {Engine}" +
+                $"\nTyres: {Tyres}";
+
+            return info;
         }
     }
 }

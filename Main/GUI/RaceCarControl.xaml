@@ -44,7 +44,7 @@
             <ComboBoxItem Content="Wings, spoiler"/>
         </ComboBox>
         <Button x:Name="ButtonBuild" Content="BUILD" HorizontalAlignment="Center" Height="40" Margin="0,378,0,0" VerticalAlignment="Top" Width="80" Click="ButtonBuild_Click" FontWeight="Bold"/>
-        <Label x:Name="LabelRaceCarControlHeader" Content="F1 CAR - FOR RACE" HorizontalAlignment="Left" Margin="2,2,0,0" VerticalAlignment="Top" FontWeight="Bold" FontStyle="Italic"/>
+        <Label x:Name="LabelRaceCarControlHeader" Content="F1 CAR - FOR RACE" HorizontalAlignment="Left" Margin="2,2,0,0" VerticalAlignment="Top" FontWeight="Bold" FontStyle="Italic" FontSize="16"/>
         <Label Content="Unique number" Margin="2,30,678,380"/>
         <Label Content="Formula type" Margin="2,65,678,345"/>
         <Label Content="F" HorizontalAlignment="Left" Margin="86,65,0,0" VerticalAlignment="Top"/>
