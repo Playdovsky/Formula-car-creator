@@ -5,15 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Main"
         mc:Ignorable="d"
-        Title="Conversion to damaged" Height="445" Width="300">
+        Title="Conversion to damaged car" Height="400" Width="300">
     <Grid>
-        <TextBox x:Name="TextBoxReasonConversion" HorizontalAlignment="Left" Margin="18,52,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="207" Height="80"/>
-        <TextBox x:Name="TextBoxDamagedComponents" HorizontalAlignment="Left" Margin="18,163,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="201" Height="40"/>
-        <CheckBox x:Name="CheckBoxCanBeFixed" Content="Can be fixed" Margin="18,229,184,0" VerticalAlignment="Top" Height="15" Unchecked="CheckBoxCanBeFixed_Unchecked" Checked="CheckBoxCanBeFixed_Checked"/>
-        <Button x:Name="ButtonConvert" Content="Convert" HorizontalAlignment="Left" Height="30" Margin="12,369,0,0" VerticalAlignment="Top" Width="120" Click="ButtonConvert_Click"/>
-        <Label x:Name="LabelDamagedComponents" Content="Damaged components:" HorizontalAlignment="Left" Margin="12,137,0,0" VerticalAlignment="Top"/>
-        <Label Content="Why has been damaged (reason):" HorizontalAlignment="Left" Margin="12,26,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="TextBoxRepairTime" HorizontalAlignment="Left" Margin="18,287,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="18" Visibility="Hidden"/>
-        <Label x:Name="LabelRepairTime" Content="Repair time (in hours):" HorizontalAlignment="Left" Margin="15,261,0,0" VerticalAlignment="Top" Height="26" Width="126" Visibility="Hidden"/>
+        <TextBox x:Name="TextBoxReasonConversion" HorizontalAlignment="Left" Margin="10,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="207" Height="80"/>
+        <TextBox x:Name="TextBoxDamagedComponents" HorizontalAlignment="Left" Margin="10,149,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="207" Height="40"/>
+        <CheckBox x:Name="CheckBoxCanBeFixed" Content="Can be fixed" Margin="10,210,187,0" VerticalAlignment="Top" Height="15" Unchecked="CheckBoxCanBeFixed_Unchecked" Checked="CheckBoxCanBeFixed_Checked"/>
+        <Button x:Name="ButtonConvert" Content="Convert" HorizontalAlignment="Left" Height="30" Margin="10,315,0,0" VerticalAlignment="Top" Width="120" Click="ButtonConvert_Click"/>
+        <Label x:Name="LabelDamagedComponents" Content="Damaged components:" HorizontalAlignment="Left" Margin="10,123,0,0" VerticalAlignment="Top"/>
+        <Label Content="Why has been damaged (reason):" HorizontalAlignment="Left" Margin="10,12,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="TextBoxRepairTime" HorizontalAlignment="Left" Margin="10,273,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="18" Visibility="Hidden"/>
+        <Label x:Name="LabelRepairTime" Content="Repair time (in hours):" HorizontalAlignment="Left" Margin="10,247,0,0" VerticalAlignment="Top" Height="26" Width="126" Visibility="Hidden"/>
     </Grid>
 </Window>

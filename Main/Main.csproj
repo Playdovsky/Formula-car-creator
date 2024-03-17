@@ -67,6 +67,9 @@
     <Compile Include="GUI\GarageWindow.xaml.cs">
       <DependentUpon>GarageWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="GUI\ShowConversionWindow.xaml.cs">
+      <DependentUpon>ShowConversionWindow.xaml</DependentUpon>
+    </Compile>
     <Page Include="GUI\DamageConversionWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -92,6 +95,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="GUI\GarageWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\ShowConversionWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

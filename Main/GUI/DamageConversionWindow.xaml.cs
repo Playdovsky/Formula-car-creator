@@ -27,6 +27,7 @@ namespace Main
         public DamageConversionWindow(int number, byte type, string aerodynamics, string engine, string tyres)
         {
             InitializeComponent();
+
             Number = number;
             Type = type;
             Aerodynamics = aerodynamics;

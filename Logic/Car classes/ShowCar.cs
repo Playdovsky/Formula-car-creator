@@ -19,5 +19,20 @@ namespace Logic
             ForSale = forSale;
             Advertiser = advertiser;
         }
+
+        public override string CarInfo()
+        {
+            string info = $"F1 car - show car version\nshow car is made for motorsport shows as an attraction or made for sale on civilian market." +
+                $"\n_________________________________________________________________________" +
+                $"\n\nNumber: {Number}" +
+                $"\nType: F{Type}" +
+                $"\n\nWho will be advertiser: {Advertiser}" +
+                $"\nIs this car for sale: {ForSale}" +
+                $"\n\nAerodynamics: {Aerodynamics}" +
+                $"\nEngine: {Engine}" +
+                $"\nTyres: {Tyres}";
+
+            return info;
+        }
     }
 }

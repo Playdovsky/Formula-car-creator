@@ -15,20 +15,16 @@ using Logic;
 
 namespace Main
 {
+
     public partial class GarageWindow : Window
     {
         private List<Car> cars;
+        private byte option = 0;
+
         public GarageWindow()
         {
             InitializeComponent();
             LoadCars();
-        }
-
-        public void LoadCars()
-        {
-            cars = Car.cars;
-            DataGridCars.ItemsSource = null;
-            DataGridCars.ItemsSource = cars;
         }
 
         private void DataGridCars_MouseDoubleClick(object sender, MouseButtonEventArgs e)
@@ -55,11 +51,23 @@ namespace Main
 
         private void ButtonConvertDamaged_Click(object sender, RoutedEventArgs e)
         {
+            option = 1;
+            Conversion();
+        }
+
+        private void ButtonConvertShow_Click(object sender, RoutedEventArgs e)
+        {
+            option = 2;
+            Conversion();
+        }
+
+        private void Conversion()
+        {
             try
             {
                 Car selectedCar = (Car)DataGridCars.SelectedItem;
 
-                if(selectedCar is null)
+                if (selectedCar is null)
                 {
                     throw new ArgumentNullException(nameof(selectedCar));
                 }
@@ -70,9 +78,21 @@ namespace Main
                 string engine = selectedCar.Engine;
                 string tyres = selectedCar.Tyres;
 
-                DamageConversionWindow conversionWindow = new DamageConversionWindow(number, type, aerodynamics, engine, tyres);
-                conversionWindow.Show();
                 cars.Remove(selectedCar);
+
+                switch (option)
+                {
+                    case 1:
+                        DamageConversionWindow damagedConversion = new DamageConversionWindow(number, type, aerodynamics, engine, tyres);
+                        damagedConversion.Show();
+                        break;
+                    case 2:
+                        ShowConversionWindow showConversion = new ShowConversionWindow(number, type, aerodynamics, engine, tyres);
+                        showConversion.Show();
+                        break;
+                    default: 
+                        throw new ArgumentOutOfRangeException(nameof(option));
+                }
             }
             catch (ArgumentNullException)
             {
@@ -80,14 +100,16 @@ namespace Main
             }
         }
 
-        private void ButtonConvertShow_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void ButtonRefresh_Click(object sender, RoutedEventArgs e)
         {
             LoadCars();
+        }
+
+        public void LoadCars()
+        {
+            cars = Car.cars;
+            DataGridCars.ItemsSource = null;
+            DataGridCars.ItemsSource = cars;
         }
 
     }
