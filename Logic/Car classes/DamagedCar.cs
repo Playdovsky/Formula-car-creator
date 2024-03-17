@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Runtime.InteropServices.ComTypes;
-using System.Text;
-
-namespace Logic
+﻿namespace Logic
 {
     public class DamagedCar : Car
     {

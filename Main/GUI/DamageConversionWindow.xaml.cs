@@ -1,18 +1,9 @@
 ﻿using Logic;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
+using System.Security.Cryptography.X509Certificates;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+using System.Windows.Annotations;
 
 namespace Main
 {
@@ -23,8 +14,10 @@ namespace Main
         private string Aerodynamics { get; set; }
         private string Engine { get; set; }
         private string Tyres { get; set; }
+        private List<Car> Cars { get; set; }
+        private Car SelectedCar { get; set; }
 
-        public DamageConversionWindow(int number, byte type, string aerodynamics, string engine, string tyres)
+        public DamageConversionWindow(List<Car> cars, Car selectedCar, int number, byte type, string aerodynamics, string engine, string tyres)
         {
             InitializeComponent();
 
@@ -33,21 +26,44 @@ namespace Main
             Aerodynamics = aerodynamics;
             Engine = engine;
             Tyres = tyres;
+            Cars = cars;
+            SelectedCar = selectedCar;
         }
 
         private void ButtonConvert_Click(object sender, RoutedEventArgs e)
         {
-            string reason = TextBoxReasonConversion.Text;
-            string damagedComponents = TextBoxDamagedComponents.Text;
-            bool canBeFixed = CheckBoxCanBeFixed.IsChecked.Value;
-            string repairTime = TextBoxRepairTime.Text;
-
-            if (repairTime == "")
+            try
             {
-                repairTime = "cannot be repaired";
-            }
+                if (string.IsNullOrWhiteSpace(TextBoxReasonConversion.Text) || string.IsNullOrWhiteSpace(TextBoxDamagedComponents.Text))
+                {
+                    throw new ArgumentNullException();
+                }
 
-            ConversionDamaged(reason, damagedComponents, canBeFixed, repairTime);
+                string reason = TextBoxReasonConversion.Text;
+                string damagedComponents = TextBoxDamagedComponents.Text;
+                bool canBeFixed = CheckBoxCanBeFixed.IsChecked.Value;
+                string repairTime = "Cannot be repaired";
+                int repairTimeInt;
+
+                if (!string.IsNullOrWhiteSpace(TextBoxRepairTime.Text) && int.TryParse(TextBoxRepairTime.Text, out repairTimeInt))
+                {
+                    if (canBeFixed && repairTimeInt > 0)
+                    {
+                        repairTime = repairTimeInt.ToString() + "h";
+                    }
+                    else if (canBeFixed)
+                    {
+                        MessageBox.Show("Input correct repair time.");
+                    }
+                }
+
+                ConversionDamaged(reason, damagedComponents, canBeFixed, repairTime);
+                Cars.Remove(SelectedCar);
+            }
+            catch(ArgumentNullException anex)
+            {
+                MessageBox.Show($"{anex.Message}\nPlease input reason and damaged components");
+            }
         }
 
         public void ConversionDamaged(string reason, string damagedComponents, bool canBeFixed, string repairTime)

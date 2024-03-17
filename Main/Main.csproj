@@ -70,6 +70,7 @@
     <Compile Include="GUI\ShowConversionWindow.xaml.cs">
       <DependentUpon>ShowConversionWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Logic\Service.cs" />
     <Page Include="GUI\DamageConversionWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
