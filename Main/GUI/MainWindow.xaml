@@ -10,8 +10,7 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <ContentControl x:Name="ContentControl" Content="" HorizontalAlignment="Center" Height="440" VerticalAlignment="Center" Width="780"/>
+        <ContentControl x:Name="ContentControl" Content="RaceCarControl" HorizontalAlignment="Center" Height="440" VerticalAlignment="Center" Width="780"/>
         <Button x:Name="ButtonCarList" Content="GARAGE" HorizontalAlignment="Left" Height="25" Margin="10,10,0,0" VerticalAlignment="Top" Width="80" Click="ButtonCarList_Click" FontWeight="Bold"/>
-        <Button x:Name="ButtonCarType" Content="CHANGE CAR TYPE" HorizontalAlignment="Left" Height="25" Margin="95,10,0,0" VerticalAlignment="Top" Width="120" Click="ButtonCarType_Click" FontWeight="Bold"/>
     </Grid>
 </Window>

@@ -20,7 +20,14 @@ namespace Main
         private void DataGridCars_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             Car selectedCar = (Car)DataGridCars.SelectedItem;
-            MessageBox.Show(selectedCar.CarInfo());
+            if (selectedCar is null)
+            {
+                throw new Argu
+            }
+            else
+            {
+                MessageBox.Show(selectedCar.CarInfo());
+            }
         }
 
         private void ButtonDelete_Click(object sender, RoutedEventArgs e)
