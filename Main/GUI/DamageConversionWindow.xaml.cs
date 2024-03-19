@@ -73,7 +73,7 @@ namespace Main
         public void ConversionDamaged(string reason, string damagedComponents, bool canBeFixed, string repairTime)
         {
             DamagedCar damagedCar = new DamagedCar(Number, Type, Aerodynamics, Engine, Tyres, reason, damagedComponents, canBeFixed, repairTime);
-            Car.cars.Add(damagedCar);
+            RaceCar.cars.Add(damagedCar);
             MessageBox.Show("Conversion successfull, car is now marked as damaged.");
         }
 

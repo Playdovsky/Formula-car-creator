@@ -28,8 +28,8 @@ namespace Main
                     throw new FormatException();
                 }
 
-                Car car = new Car { Number = number, Type = type, Aerodynamics = aerodynamics, Engine = engine, Tyres = tyres };
-                Car.cars.Add(car);
+                //Car car = new Car { Number = number, Type = type, Aerodynamics = aerodynamics, Engine = engine, Tyres = tyres };
+                //RaceCar.cars.Add(car);
 
                 MessageBox.Show($"You have created new formula {type} car!");
             }

@@ -41,11 +41,10 @@ namespace Main
                 string location = TextBoxLocation.Text;
                 bool forSale = CheckBoxForSale.IsChecked.Value;
                 string price = "Not for sale";
-                int priceInt;
 
                 if (forSale)
                 {
-                    if (int.TryParse(TextBoxPrice.Text, out priceInt) && priceInt >= 100000)
+                    if (int.TryParse(TextBoxPrice.Text, out int priceInt) && priceInt >= 100000)
                     {
                         price = priceInt.ToString() + "$";
                         ConversionShow(advertisers, location, forSale, price);
@@ -72,7 +71,7 @@ namespace Main
         public void ConversionShow(string advertisers, string location, bool forSale, string price)
         {
             ShowCar showCar = new ShowCar(Number, Type, Aerodynamics, Engine, Tyres, advertisers, location, forSale, price);
-            Car.cars.Add(showCar);
+            RaceCar.cars.Add(showCar);
             MessageBox.Show("Conversion successfull, car is now marked for show.");
         }
 

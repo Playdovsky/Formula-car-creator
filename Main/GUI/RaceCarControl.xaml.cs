@@ -44,7 +44,7 @@ namespace Main
                 bool fia = CheckBoxFIA.IsChecked.Value;
 
                 RaceCar raceCar = new RaceCar(number, type, aerodynamics, engine, tyres, brakes, maxSpeed, acceleration, fia);
-                Car.cars.Add(raceCar);
+                RaceCar.cars.Add(raceCar);
 
                 MessageBox.Show($"You have created new formula {type} car!");
             }

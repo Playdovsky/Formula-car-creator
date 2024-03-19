@@ -51,7 +51,7 @@ namespace Main
 
         public void LoadCars()
         {
-            cars = Car.cars;
+            cars = RaceCar.cars;
             DataGridCars.ItemsSource = null;
             DataGridCars.ItemsSource = cars;
         }
