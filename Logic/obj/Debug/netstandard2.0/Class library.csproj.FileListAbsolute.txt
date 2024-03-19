@@ -1,0 +1,11 @@
+C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Logic\bin\Debug\netstandard2.0\Class library.deps.json
+C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Logic\bin\Debug\netstandard2.0\Class library.dll
+C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Logic\bin\Debug\netstandard2.0\Class library.pdb
+C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Logic\obj\Debug\netstandard2.0\Class library.csproj.AssemblyReference.cache
+C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Logic\obj\Debug\netstandard2.0\Class library.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Logic\obj\Debug\netstandard2.0\Class library.AssemblyInfoInputs.cache
+C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Logic\obj\Debug\netstandard2.0\Class library.AssemblyInfo.cs
+C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Logic\obj\Debug\netstandard2.0\Class library.csproj.CoreCompileInputs.cache
+C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Logic\obj\Debug\netstandard2.0\Class library.sourcelink.json
+C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Logic\obj\Debug\netstandard2.0\Class library.dll
+C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Logic\obj\Debug\netstandard2.0\Class library.pdb

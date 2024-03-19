@@ -186,9 +186,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tubix\\OneDrive\\Documents\\GitHub\\Formula-1-car-creator\\Logic\\Logic.csproj",
-      "projectName": "Logic",
-      "projectPath": "C:\\Users\\tubix\\OneDrive\\Documents\\GitHub\\Formula-1-car-creator\\Logic\\Logic.csproj",
+      "projectUniqueName": "C:\\Users\\tubix\\OneDrive\\Documents\\GitHub\\Formula-1-car-creator\\Logic\\Class library.csproj",
+      "projectName": "Class library",
+      "projectPath": "C:\\Users\\tubix\\OneDrive\\Documents\\GitHub\\Formula-1-car-creator\\Logic\\Class library.csproj",
       "packagesPath": "C:\\Users\\tubix\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\tubix\\OneDrive\\Documents\\GitHub\\Formula-1-car-creator\\Logic\\obj\\",
       "projectStyle": "PackageReference",

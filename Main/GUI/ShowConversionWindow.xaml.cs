@@ -43,20 +43,25 @@ namespace Main
                 string price = "Not for sale";
                 int priceInt;
 
-                if (!string.IsNullOrWhiteSpace(TextBoxPrice.Text) && int.TryParse(TextBoxPrice.Text, out priceInt))
+                if (forSale)
                 {
-                    if (forSale && priceInt >= 100000)
+                    if (int.TryParse(TextBoxPrice.Text, out priceInt) && priceInt >= 100000)
                     {
                         price = priceInt.ToString() + "$";
+                        ConversionShow(advertisers, location, forSale, price);
+                        Cars.Remove(SelectedCar);
                     }
-                    else if (forSale)
+                    else
                     {
-                        MessageBox.Show("Car seems to be too cheap.");
+                        MessageBox.Show("Either price is too small for formula car or you entered invalid signs into the price field.");
                     }
                 }
+                else
+                {
+                    ConversionShow(advertisers, location, forSale, price);
+                    Cars.Remove(SelectedCar);
+                }
 
-                ConversionShow(advertisers, location, forSale, price);
-                Cars.Remove(SelectedCar);
             }
             catch (ArgumentNullException anex)
             {

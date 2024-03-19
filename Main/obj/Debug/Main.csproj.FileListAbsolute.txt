@@ -1,8 +1,6 @@
 C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Main\bin\Debug\Main.exe.config
 C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Main\bin\Debug\Main.exe
 C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Main\bin\Debug\Main.pdb
-C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Main\bin\Debug\Logic.dll
-C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Main\bin\Debug\Logic.pdb
 C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Main\obj\Debug\Main.csproj.AssemblyReference.cache
 C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Main\obj\Debug\Main_MarkupCompile.cache
 C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Main\obj\Debug\Main_MarkupCompile.lref
@@ -26,3 +24,5 @@ C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Main\obj\Debug\GU
 C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Main\obj\Debug\GUI\DamageConversionWindow.baml
 C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Main\obj\Debug\GUI\ShowConversionWindow.g.cs
 C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Main\obj\Debug\GUI\ShowConversionWindow.baml
+C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Main\bin\Debug\Class library.dll
+C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Main\bin\Debug\Class library.pdb

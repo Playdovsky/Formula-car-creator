@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Jc6zeES9rW1Y/uv+UnrPDrQYqpawKhpvSua+TZ8/UjonO8YWPwwEyww9gimXaW+H1HPwRFhhfVuyDpyMti5TFQ==",
+  "dgSpecHash": "mNrLvW7ltSuyYdx4OfrV9oeslYyzHyGVlpo2jxtmwmgLerFnMGVoWmwrTbl47RkrYik48LxMOGY2OxunLJBaeQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\tubix\\OneDrive\\Documents\\GitHub\\Formula-1-car-creator\\Logic\\Logic.csproj",
+  "projectFilePath": "C:\\Users\\tubix\\OneDrive\\Documents\\GitHub\\Formula-1-car-creator\\Logic\\Class library.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tubix\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\tubix\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"

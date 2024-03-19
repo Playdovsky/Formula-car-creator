@@ -45,20 +45,24 @@ namespace Main
                 string repairTime = "Cannot be repaired";
                 int repairTimeInt;
 
-                if (!string.IsNullOrWhiteSpace(TextBoxRepairTime.Text) && int.TryParse(TextBoxRepairTime.Text, out repairTimeInt))
+                if (canBeFixed)
                 {
-                    if (canBeFixed && repairTimeInt > 0)
+                    if (int.TryParse(TextBoxRepairTime.Text, out repairTimeInt) && repairTimeInt > 0)
                     {
                         repairTime = repairTimeInt.ToString() + "h";
+                        ConversionDamaged(reason, damagedComponents, canBeFixed, repairTime);
+                        Cars.Remove(SelectedCar);
                     }
-                    else if (canBeFixed)
+                    else
                     {
-                        MessageBox.Show("Input correct repair time.");
+                        MessageBox.Show("Incorrect input in repair time field.");
                     }
                 }
-
-                ConversionDamaged(reason, damagedComponents, canBeFixed, repairTime);
-                Cars.Remove(SelectedCar);
+                else
+                {
+                    ConversionDamaged(reason, damagedComponents, canBeFixed, repairTime);
+                    Cars.Remove(SelectedCar);
+                }
             }
             catch(ArgumentNullException anex)
             {

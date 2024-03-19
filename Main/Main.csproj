@@ -131,9 +131,9 @@
     <None Include="App\App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Logic\Logic.csproj">
+    <ProjectReference Include="..\Logic\Class library.csproj">
       <Project>{d94163a8-4d9a-44c0-a93e-9701ca1cb5a6}</Project>
-      <Name>Logic</Name>
+      <Name>Class library</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
