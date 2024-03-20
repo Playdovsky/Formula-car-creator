@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Input;
 using Logic;
@@ -19,14 +20,14 @@ namespace Main
 
         private void DataGridCars_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            Car selectedCar = (Car)DataGridCars.SelectedItem;
-            if (selectedCar is null)
+            try
             {
-                throw new Argu
-            }
-            else
-            {
+                Car selectedCar = (Car)DataGridCars.SelectedItem;
                 MessageBox.Show(selectedCar.CarInfo());
+            }
+            catch (NullReferenceException nrex)
+            {
+                MessageBox.Show($"{nrex.Message}. Please select car from the datagrid");
             }
         }
 
@@ -47,6 +48,13 @@ namespace Main
         private void ButtonConvertShow_Click(object sender, RoutedEventArgs e)
         {
             option = 2;
+            Car selectedCar = (Car)DataGridCars.SelectedItem;
+            Service.Conversion(option, selectedCar, cars);
+        }
+
+        private void ButtonConvertRace_Click(object sender, RoutedEventArgs e)
+        {
+            option = 3;
             Car selectedCar = (Car)DataGridCars.SelectedItem;
             Service.Conversion(option, selectedCar, cars);
         }

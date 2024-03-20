@@ -43,11 +43,10 @@ namespace Main
                 string damagedComponents = TextBoxDamagedComponents.Text;
                 bool canBeFixed = CheckBoxCanBeFixed.IsChecked.Value;
                 string repairTime = "Cannot be repaired";
-                int repairTimeInt;
 
                 if (canBeFixed)
                 {
-                    if (int.TryParse(TextBoxRepairTime.Text, out repairTimeInt) && repairTimeInt > 0)
+                    if (int.TryParse(TextBoxRepairTime.Text, out int repairTimeInt) && repairTimeInt > 0)
                     {
                         repairTime = repairTimeInt.ToString() + "h";
                         ConversionDamaged(reason, damagedComponents, canBeFixed, repairTime);

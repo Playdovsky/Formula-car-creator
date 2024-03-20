@@ -1,4 +1,5 @@
 ﻿using Logic;
+using Main.GUI;
 using System;
 using System.Collections.Generic;
 using System.Windows;
@@ -31,6 +32,10 @@ namespace Main
                     case 2:
                         ShowConversionWindow showConversion = new ShowConversionWindow(cars, selectedCar, number, type, aerodynamics, engine, tyres);
                         showConversion.Show();
+                        break;
+                    case 3:
+                        RaceConversionWindow raceConversion = new RaceConversionWindow(cars, selectedCar, number, type, aerodynamics, engine, tyres);
+                        raceConversion.Show();
                         break;
                     default:
                         throw new ArgumentOutOfRangeException(nameof(option));

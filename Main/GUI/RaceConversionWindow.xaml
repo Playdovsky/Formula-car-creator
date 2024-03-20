@@ -1,0 +1,20 @@
+﻿<Window x:Class="Main.GUI.RaceConversionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Main.GUI"
+        mc:Ignorable="d"
+        Title="Conversion to race car" Height="400" Width="300">
+    <Grid>
+        <TextBox x:Name="TextBoxBrakes" HorizontalAlignment="Left" Height="24" Margin="146,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" MaxLength="4"/>
+        <TextBox x:Name="TextBoxMaxSpeed" HorizontalAlignment="Left" Height="26" Margin="146,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" MaxLength="3"/>
+        <TextBox x:Name="TextBoxAcceleration" HorizontalAlignment="Left" Height="24" Margin="146,71,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" MaxLength="3"/>
+        <CheckBox x:Name="CheckBoxFIA" Content="Approved by FIA" HorizontalAlignment="Left" Height="23" Margin="10,150,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="LabelMaxSpeed" Content="Max speed (km/h)" Margin="10,38,154,316"/>
+        <Label x:Name="LabelAcceleration" Content="Acceleration (0-100km)" Margin="10,68,154,286"/>
+        <Label x:Name="LabelBrakes" Content="Brakes balance (in %)" Margin="10,97,154,257"/>
+        <Button x:Name="ButtonConvert" Content="Convert" HorizontalAlignment="Left" Height="30" Margin="10,322,0,0" VerticalAlignment="Top" Width="120" Click="ButtonConvert_Click"/>
+
+    </Grid>
+</Window>
