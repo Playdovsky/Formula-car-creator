@@ -50,11 +50,11 @@ namespace Main
             }
             catch (FormatException)
             {
-                MessageBox.Show($"You either entered information in the wrong format or did not provide any information at all at certain fields. Please check sheet fields once again and make sure everything is in correct format\n");
+                MessageBox.Show("You either entered information in the wrong format or did not provide any information at all at certain fields. Please check sheet fields once again and make sure everything is in correct format\n");
             }
             catch (Exception)
             {
-                MessageBox.Show($"Information you provided is too untrue to be used in a new formula car.");
+                MessageBox.Show("Information you provided is too untrue to be used in a new formula car.");
             }
         }
     }
