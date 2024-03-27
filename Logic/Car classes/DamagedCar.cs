@@ -5,9 +5,9 @@
         public string Reason { get; set; }
         public string DamagedComponents { get; set; }
         public bool CanBeFixed { get; set; }
-        public string RepairTime { get; set; }
+        public int? RepairTime { get; set; }
 
-        public DamagedCar(int number, byte type, string aerodynamics, string engine, string tyres, string reason, string damagedComponents, bool canBeFixed, string repairTime) 
+        public DamagedCar(int number, byte type, string aerodynamics, string engine, string tyres, string reason, string damagedComponents, bool canBeFixed, int? repairTime) 
         {
             base.Number = number;
             base.Type = type;
@@ -22,17 +22,27 @@
 
         public override string CarInfo()
         {
-            string info = $"F1 car - damaged version\ndamaged car designated for repairs or disassemble" +
-                $"\n_________________________________________________________________________" +
-                $"\n\nNumber: {Number}" +
-                $"\nType: F{Type}" +
-                $"\n\nWhy was damaged: {Reason}" +
-                $"\nDamaged components: {DamagedComponents}" +
-                $"\nCan be fixed: {CanBeFixed}" +
-                $"\nRepair time: {RepairTime}" +
-                $"\n\nAerodynamics: {Aerodynamics}" +
-                $"\nEngine: {Engine}" +
-                $"\nTyres: {Tyres}";
+            string repair;
+
+            if (RepairTime is null)
+            {
+                repair = "Cannot be repaired";
+            }
+            else
+            {
+                repair = $"Can be fixed\nRepair time: {RepairTime}h";
+            }
+
+            string info = $"Formula car - damaged version\ndamaged car designated for repairs or disassemble" +
+                    $"\n_________________________________________________________________________" +
+                    $"\n\nNumber: {Number}" +
+                    $"\nType: F{Type}" +
+                    $"\n\nWhy has been damaged: {Reason}" +
+                    $"\nDamaged components: {DamagedComponents}" +
+                    $"\n{repair}" +
+                    $"\n\nAerodynamics: {Aerodynamics}" +
+                    $"\nEngine: {Engine}" +
+                    $"\nTyres: {Tyres}";
 
             return info;
         }

@@ -42,16 +42,8 @@ namespace Main.GUI
                 double acceleration = double.Parse(TextBoxAcceleration.Text);
                 bool approvedByFIA = CheckBoxFIA.IsChecked.Value;
 
-                if (brakesBalance > 100 || maxSpeed > 500 || acceleration > 10)
-                {
-                    throw new Exception();
-                }
-                else
-                {
-                    ConversionRace(maxSpeed, brakesBalance, acceleration, approvedByFIA);
-                    Cars.Remove(SelectedCar);
-                }
-
+                ConversionRace(maxSpeed, brakesBalance, acceleration, approvedByFIA);
+                Cars.Remove(SelectedCar);
             }
             catch (ArgumentNullException anex) 
             {

@@ -1,12 +1,67 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Logic
 {
     public class RaceCar : Car
     {
-        public short MaxSpeed { get; set; }
-        public double BrakesBalance { get; set; }
-        public double Acceleration { get; set; }
+        private short _maxSpeed;
+        public short MaxSpeed
+        {
+            get
+            {
+                return _maxSpeed;
+            }
+            set
+            {
+                if (value < 500)
+                {
+                    _maxSpeed = value;
+                }
+                else
+                {
+                    throw new ArgumentException();
+                }
+            }
+        }
+
+        private double _brakesBalance;
+        public double BrakesBalance {
+            get 
+            {
+                return _brakesBalance;
+            } 
+            set
+            {
+                if (value > 10 && value < 90)
+                {
+                    _brakesBalance = value;
+                }
+                else
+                {
+                    throw new ArgumentException();
+                }
+            } 
+        }
+
+        private double _acceleration;
+        public double Acceleration {
+            get
+            {
+                return _acceleration;
+            }
+            set
+            {
+                if (value > 1.8 && value < 7)
+                {
+                    _acceleration = value;
+                }
+                else
+                {
+                    throw new ArgumentException();
+                }
+            }
+        }
         public bool ApprovedByFIA { get; set; }
 
         public RaceCar(int number, byte type, string aerodynamics, string engine, string tyres, double brakes, short maxSpeed, double acceleration, bool approvedByFIA)
@@ -41,7 +96,7 @@ namespace Logic
 
         public override string CarInfo()
         {
-            string info = $"F1 car - race version\nmade specifically for racing in formula competition" +
+            string info = $"Formula car - race version\nmade specifically for racing in formula competition" +
                 $"\n_________________________________________________________________________" +
                 $"\n\nNumber: {Number}" +
                 $"\nType: F{Type}" +

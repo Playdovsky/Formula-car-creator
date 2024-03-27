@@ -40,27 +40,23 @@ namespace Main
                 string advertisers = TextBoxAdvertiser.Text;
                 string location = TextBoxLocation.Text;
                 bool forSale = CheckBoxForSale.IsChecked.Value;
-                string price = "Not for sale";
+                double? price = null;
 
                 if (forSale)
                 {
-                    if (int.TryParse(TextBoxPrice.Text, out int priceInt) && priceInt >= 100000)
+                    if (double.TryParse(TextBoxPrice.Text, out double priceDouble) && priceDouble >= 100000)
                     {
-                        price = priceInt.ToString() + "$";
-                        ConversionShow(advertisers, location, forSale, price);
-                        Cars.Remove(SelectedCar);
+                        price = priceDouble;
                     }
                     else
                     {
                         MessageBox.Show("Either price is too small for formula car or you entered invalid signs into the price field.");
+                        return;
                     }
                 }
-                else
-                {
-                    ConversionShow(advertisers, location, forSale, price);
-                    Cars.Remove(SelectedCar);
-                }
 
+                ConversionShow(advertisers, location, forSale, price);
+                Cars.Remove(SelectedCar);
             }
             catch (ArgumentNullException anex)
             {
@@ -68,12 +64,13 @@ namespace Main
             }
         }
 
-        public void ConversionShow(string advertisers, string location, bool forSale, string price)
+        public void ConversionShow(string advertisers, string location, bool forSale, double? price)
         {
             ShowCar showCar = new ShowCar(Number, Type, Aerodynamics, Engine, Tyres, advertisers, location, forSale, price);
             RaceCar.cars.Add(showCar);
-            MessageBox.Show("Conversion successfull, car is now marked for show.");
+            MessageBox.Show("Conversion successful, car is now marked for show.");
         }
+
 
         private void CheckBoxForSale_Checked(object sender, RoutedEventArgs e)
         {

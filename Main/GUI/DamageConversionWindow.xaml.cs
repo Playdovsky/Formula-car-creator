@@ -42,39 +42,37 @@ namespace Main
                 string reason = TextBoxReasonConversion.Text;
                 string damagedComponents = TextBoxDamagedComponents.Text;
                 bool canBeFixed = CheckBoxCanBeFixed.IsChecked.Value;
-                string repairTime = "Cannot be repaired";
+                int? repairTime = null;
 
                 if (canBeFixed)
                 {
                     if (int.TryParse(TextBoxRepairTime.Text, out int repairTimeInt) && repairTimeInt > 0)
                     {
-                        repairTime = repairTimeInt.ToString() + "h";
-                        ConversionDamaged(reason, damagedComponents, canBeFixed, repairTime);
-                        Cars.Remove(SelectedCar);
+                        repairTime = repairTimeInt;
                     }
                     else
                     {
                         MessageBox.Show("Incorrect input in repair time field.");
+                        return;
                     }
                 }
-                else
-                {
-                    ConversionDamaged(reason, damagedComponents, canBeFixed, repairTime);
-                    Cars.Remove(SelectedCar);
-                }
+
+                ConversionDamaged(reason, damagedComponents, canBeFixed, repairTime);
+                Cars.Remove(SelectedCar);
             }
-            catch(ArgumentNullException anex)
+            catch (ArgumentNullException anex)
             {
                 MessageBox.Show($"{anex.Message}\nPlease input reason and damaged components");
             }
         }
 
-        public void ConversionDamaged(string reason, string damagedComponents, bool canBeFixed, string repairTime)
+        public void ConversionDamaged(string reason, string damagedComponents, bool canBeFixed, int? repairTime)
         {
             DamagedCar damagedCar = new DamagedCar(Number, Type, Aerodynamics, Engine, Tyres, reason, damagedComponents, canBeFixed, repairTime);
             RaceCar.cars.Add(damagedCar);
-            MessageBox.Show("Conversion successfull, car is now marked as damaged.");
+            MessageBox.Show("Conversion successful, car is now marked as damaged.");
         }
+
 
         private void CheckBoxCanBeFixed_Unchecked(object sender, RoutedEventArgs e)
         {

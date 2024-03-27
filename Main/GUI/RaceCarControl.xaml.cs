@@ -5,9 +5,6 @@ using System.Windows.Controls;
 
 namespace Main
 {
-    /// <summary>
-    /// Logika interakcji dla klasy RaceCarControl.xaml
-    /// </summary>
     public partial class RaceCarControl : UserControl
     {
         public RaceCarControl()
@@ -35,12 +32,6 @@ namespace Main
                 double brakes = double.Parse(TextBoxBrakes.Text);
                 short maxSpeed = short.Parse(TextBoxMaxSpeed.Text);
                 double acceleration = double.Parse(TextBoxAcceleration.Text);
-
-                if (brakes > 100 || maxSpeed > 500 || acceleration > 10)
-                {
-                    throw new Exception();
-                }
-                
                 bool fia = CheckBoxFIA.IsChecked.Value;
 
                 RaceCar raceCar = new RaceCar(number, type, aerodynamics, engine, tyres, brakes, maxSpeed, acceleration, fia);

@@ -26,9 +26,9 @@ namespace Main
                 Car selectedCar = (Car)DataGridCars.SelectedItem;
                 MessageBox.Show(selectedCar.CarInfo());
             }
-            catch (NullReferenceException nrex)
+            catch (Exception ex)
             {
-                MessageBox.Show($"{nrex.Message}. Please select car from the datagrid");
+                MessageBox.Show($"{ex.Message}. Please select car from the datagrid");
             }
         }
 
