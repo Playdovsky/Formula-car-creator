@@ -14,7 +14,7 @@ namespace Logic
             }
             set
             {
-                if (value < 500)
+                if (value > 270 && value < 500)
                 {
                     _maxSpeed = value;
                 }
