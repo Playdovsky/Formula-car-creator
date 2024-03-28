@@ -58,9 +58,6 @@
     <Compile Include="GUI\DamageConversionWindow.xaml.cs">
       <DependentUpon>DamageConversionWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="GUI\CarControl.xaml.cs">
-      <DependentUpon>CarControl.xaml</DependentUpon>
-    </Compile>
     <Compile Include="GUI\RaceCarControl.xaml.cs">
       <DependentUpon>RaceCarControl.xaml</DependentUpon>
     </Compile>
@@ -70,12 +67,11 @@
     <Compile Include="GUI\ShowConversionWindow.xaml.cs">
       <DependentUpon>ShowConversionWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="GUI\RaceConversionWindow.xaml.cs">
+      <DependentUpon>RaceConversionWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Logic\Service.cs" />
     <Page Include="GUI\DamageConversionWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="GUI\CarControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -100,6 +96,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="GUI\ShowConversionWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\RaceConversionWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

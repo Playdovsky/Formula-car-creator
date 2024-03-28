@@ -5,9 +5,9 @@
         public string Advertisers { get; set; }
         public string Location { get; set; }
         public bool ForSale { get; set; }
-        public string Price { get; set; }
+        public double? Price { get; set; }
 
-        public ShowCar(int number, byte type, string aerodynamics, string engine, string tyres, string advertisers, string location, bool forSale, string price)
+        public ShowCar(int number, byte type, string aerodynamics, string engine, string tyres, string advertisers, string location, bool forSale, double? price)
         {
             base.Number = number;
             base.Type = type;
@@ -22,14 +22,24 @@
 
         public override string CarInfo()
         {
-            string info = $"F1 car - show car version\nshow car is made for motorsport shows as an attraction or made for sale on civilian market." +
+            string price;
+
+            if (Price is null)
+            {
+                price = "Not for sale";
+            }
+            else
+            {
+                price = $"Is for sale\nPrice: {Price}$";
+            }
+
+            string info = $"Formula car - show car version\nshow car is made for motorsport shows as an attraction or made for sale on civilian market" +
                 $"\n_________________________________________________________________________" +
                 $"\n\nNumber: {Number}" +
                 $"\nType: F{Type}" +
-                $"\n\nWho will be advertiser: {Advertisers}" +
+                $"\n\nAdvertisers: {Advertisers}" +
                 $"\nWhere is located: {Location}" +
-                $"\nIs this car for sale: {ForSale}" +
-                $"\nPrice: {Price}" +
+                $"\n{price}" +
                 $"\n\nAerodynamics: {Aerodynamics}" +
                 $"\nEngine: {Engine}" +
                 $"\nTyres: {Tyres}";

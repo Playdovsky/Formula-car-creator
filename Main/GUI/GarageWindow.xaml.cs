@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Input;
 using Logic;
 
@@ -19,8 +21,15 @@ namespace Main
 
         private void DataGridCars_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            Car selectedCar = (Car)DataGridCars.SelectedItem;
-            MessageBox.Show(selectedCar.CarInfo());
+            try
+            {
+                Car selectedCar = (Car)DataGridCars.SelectedItem;
+                MessageBox.Show(selectedCar.CarInfo());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"{ex.Message}. Please select car from the datagrid");
+            }
         }
 
         private void ButtonDelete_Click(object sender, RoutedEventArgs e)
@@ -44,6 +53,13 @@ namespace Main
             Service.Conversion(option, selectedCar, cars);
         }
 
+        private void ButtonConvertRace_Click(object sender, RoutedEventArgs e)
+        {
+            option = 3;
+            Car selectedCar = (Car)DataGridCars.SelectedItem;
+            Service.Conversion(option, selectedCar, cars);
+        }
+
         private void ButtonRefresh_Click(object sender, RoutedEventArgs e)
         {
             LoadCars();
@@ -51,7 +67,7 @@ namespace Main
 
         public void LoadCars()
         {
-            cars = Car.cars;
+            cars = RaceCar.cars;
             DataGridCars.ItemsSource = null;
             DataGridCars.ItemsSource = cars;
         }

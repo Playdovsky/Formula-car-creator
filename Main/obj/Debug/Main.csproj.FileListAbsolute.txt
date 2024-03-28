@@ -18,11 +18,11 @@ C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Main\obj\Debug\GU
 C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Main\obj\Debug\App\App.g.cs
 C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Main\obj\Debug\GUI\GarageWindow.g.cs
 C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Main\obj\Debug\GUI\GarageWindow.baml
-C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Main\obj\Debug\GUI\CarControl.g.cs
-C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Main\obj\Debug\GUI\CarControl.baml
 C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Main\obj\Debug\GUI\DamageConversionWindow.g.cs
 C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Main\obj\Debug\GUI\DamageConversionWindow.baml
 C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Main\obj\Debug\GUI\ShowConversionWindow.g.cs
 C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Main\obj\Debug\GUI\ShowConversionWindow.baml
 C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Main\bin\Debug\Class library.dll
 C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Main\bin\Debug\Class library.pdb
+C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Main\obj\Debug\GUI\RaceConversionWindow.g.cs
+C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Main\obj\Debug\GUI\RaceConversionWindow.baml
