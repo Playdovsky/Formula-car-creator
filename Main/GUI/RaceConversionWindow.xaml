@@ -7,14 +7,26 @@
         mc:Ignorable="d"
         Title="Conversion to race car" Height="400" Width="300">
     <Grid>
-        <TextBox x:Name="TextBoxBrakes" HorizontalAlignment="Left" Height="24" Margin="173,103,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" MaxLength="4"/>
-        <TextBox x:Name="TextBoxMaxSpeed" HorizontalAlignment="Left" Height="26" Margin="173,43,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" MaxLength="3"/>
-        <TextBox x:Name="TextBoxAcceleration" HorizontalAlignment="Left" Height="24" Margin="173,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" MaxLength="3"/>
-        <CheckBox x:Name="CheckBoxFIA" Content="Approved by FIA" HorizontalAlignment="Left" Height="23" Margin="10,150,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="TextBoxBrakes" HorizontalAlignment="Left" Height="24" Margin="173,103,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" MaxLength="4" BorderBrush="Black"/>
+        <TextBox x:Name="TextBoxMaxSpeed" HorizontalAlignment="Left" Height="26" Margin="173,43,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" MaxLength="3" BorderBrush="Black"/>
+        <TextBox x:Name="TextBoxAcceleration" HorizontalAlignment="Left" Height="24" Margin="173,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" MaxLength="3" BorderBrush="Black"/>
+        <CheckBox x:Name="CheckBoxFIA" Content="Approved by FIA" HorizontalAlignment="Left" Height="23" Margin="10,150,0,0" VerticalAlignment="Top" Width="120" BorderBrush="Black"/>
         <Label x:Name="LabelMaxSpeed" Content="Max speed (km/h)" Margin="10,43,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
         <Label x:Name="LabelAcceleration" Content="Acceleration (0-100km)" Margin="10,73,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
         <Label x:Name="LabelBrakes" Content="Brakes balance (in %)" Margin="10,102,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
-        <Button x:Name="ButtonConvert" Content="Convert" HorizontalAlignment="Left" Height="30" Margin="10,322,0,0" VerticalAlignment="Top" Width="120" Click="ButtonConvert_Click"/>
-
+        <Button x:Name="ButtonConvert" Content="Convert" HorizontalAlignment="Left" Height="30" Margin="10,322,0,0" VerticalAlignment="Top" Width="120" Click="ButtonConvert_Click" Background="#FFB50000" Foreground="White" FontWeight="Bold" BorderBrush="Black">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border" BorderBrush="Black" Background="{TemplateBinding Background}">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="Red"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
     </Grid>
 </Window>

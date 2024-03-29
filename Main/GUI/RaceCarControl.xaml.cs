@@ -48,5 +48,11 @@ namespace Main
                 MessageBox.Show("Information you provided is too untrue to be used in a new formula car.");
             }
         }
+
+        private void ButtonCarList_Click(object sender, RoutedEventArgs e)
+        {
+            GarageWindow garageWindow = new GarageWindow();
+            garageWindow.Show();
+        }
     }
 }

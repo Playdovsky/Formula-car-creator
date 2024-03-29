@@ -10,7 +10,7 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <ContentControl x:Name="ContentControl" Content="RaceCarControl" HorizontalAlignment="Center" Height="440" VerticalAlignment="Center" Width="780"/>
-        <Button x:Name="ButtonCarList" Content="GARAGE" HorizontalAlignment="Left" Height="25" Margin="10,10,0,0" VerticalAlignment="Top" Width="80" Click="ButtonCarList_Click" FontWeight="Bold"/>
+        <ContentControl x:Name="ContentControl" Content="RaceCarControl" HorizontalAlignment="Center" Height="480" VerticalAlignment="Center" Width="780"/>
+        <Label x:Name="LabelTitle" Content="FORMULA RACE CAR CREATOR" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" FontStyle="Italic" Foreground="#FFB50000"/>
     </Grid>
 </Window>

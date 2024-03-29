@@ -7,13 +7,26 @@
         mc:Ignorable="d"
         Title="Conversion to damaged car" Height="400" Width="300">
     <Grid>
-        <TextBox x:Name="TextBoxReasonConversion" HorizontalAlignment="Left" Margin="10,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="207" Height="80"/>
-        <TextBox x:Name="TextBoxDamagedComponents" HorizontalAlignment="Left" Margin="10,149,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="207" Height="59"/>
-        <CheckBox x:Name="CheckBoxCanBeFixed" Content="Can be fixed" Margin="10,227,186,0" VerticalAlignment="Top" Height="15" Unchecked="CheckBoxCanBeFixed_Unchecked" Checked="CheckBoxCanBeFixed_Checked"/>
-        <Button x:Name="ButtonConvert" Content="Convert" HorizontalAlignment="Left" Height="30" Margin="10,322,0,0" VerticalAlignment="Top" Width="120" Click="ButtonConvert_Click"/>
+        <TextBox x:Name="TextBoxReasonConversion" HorizontalAlignment="Left" Margin="10,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="207" Height="80" BorderBrush="Black"/>
+        <TextBox x:Name="TextBoxDamagedComponents" HorizontalAlignment="Left" Margin="10,149,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="207" Height="59" BorderBrush="Black"/>
+        <CheckBox x:Name="CheckBoxCanBeFixed" Content="Can be fixed" Margin="10,227,186,0" VerticalAlignment="Top" Height="15" Unchecked="CheckBoxCanBeFixed_Unchecked" Checked="CheckBoxCanBeFixed_Checked" BorderBrush="Black"/>
+        <Button x:Name="ButtonConvert" Content="Convert" HorizontalAlignment="Left" Height="30" Margin="10,322,0,0" VerticalAlignment="Top" Width="120" Click="ButtonConvert_Click" Background="#FFB50000" Foreground="White" BorderBrush="Black" FontWeight="Bold">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border" BorderBrush="Black" Background="{TemplateBinding Background}">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="Red"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
         <Label x:Name="LabelDamagedComponents" Content="Damaged components:" HorizontalAlignment="Left" Margin="10,123,0,0" VerticalAlignment="Top"/>
         <Label Content="Why has been damaged (reason):" HorizontalAlignment="Left" Margin="10,12,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="TextBoxRepairTime" HorizontalAlignment="Left" Margin="10,282,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="18" Visibility="Hidden"/>
+        <TextBox x:Name="TextBoxRepairTime" HorizontalAlignment="Left" Margin="10,282,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="18" Visibility="Hidden" BorderBrush="Black"/>
         <Label x:Name="LabelRepairTime" Content="Repair time (in hours):" HorizontalAlignment="Left" Margin="10,256,0,0" VerticalAlignment="Top" Height="26" Width="126" Visibility="Hidden"/>
     </Grid>
 </Window>

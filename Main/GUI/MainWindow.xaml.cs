@@ -16,11 +16,5 @@ namespace Main
             RaceCarControl carControl = new RaceCarControl();
             ContentControl.Content = carControl;
         }
-
-        private void ButtonCarList_Click(object sender, RoutedEventArgs e)
-        {
-            GarageWindow garageWindow = new GarageWindow();
-            garageWindow.Show();
-        }
     }
 }

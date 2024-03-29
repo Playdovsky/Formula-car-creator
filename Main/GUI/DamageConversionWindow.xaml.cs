@@ -71,6 +71,7 @@ namespace Main
             DamagedCar damagedCar = new DamagedCar(Number, Type, Aerodynamics, Engine, Tyres, reason, damagedComponents, canBeFixed, repairTime);
             RaceCar.cars.Add(damagedCar);
             MessageBox.Show("Conversion successful, car is now marked as damaged.");
+            Close();
         }
 
 

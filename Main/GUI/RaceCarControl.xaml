@@ -5,23 +5,23 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Main"
              mc:Ignorable="d" 
-             d:DesignHeight="440" d:DesignWidth="780"
+             d:DesignHeight="480" d:DesignWidth="780"
              Background="White">
     <Grid>
-        <TextBox x:Name="TextBoxBrakes" HorizontalAlignment="Left" Height="24" Margin="730,92,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" MaxLength="4"/>
-        <TextBox x:Name="TextBoxMaxSpeed" HorizontalAlignment="Left" Height="26" Margin="730,32,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" MaxLength="3"/>
-        <TextBox x:Name="TextBoxAcceleration" HorizontalAlignment="Left" Height="24" Margin="730,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" MaxLength="3"/>
-        <CheckBox x:Name="CheckBoxFIA" Content="Approved by FIA" HorizontalAlignment="Left" Height="23" Margin="2,98,0,0" VerticalAlignment="Top" Width="120"/>
-        <ComboBox x:Name="ComboBoxTyres" HorizontalAlignment="Left" Height="25" Margin="68,366,0,0" VerticalAlignment="Top" Width="120">
+        <TextBox x:Name="TextBoxBrakes" HorizontalAlignment="Left" Height="24" Margin="722,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" MaxLength="4" BorderBrush="Black"/>
+        <TextBox x:Name="TextBoxMaxSpeed" HorizontalAlignment="Left" Height="26" Margin="722,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" MaxLength="3" BorderBrush="#FF212121"/>
+        <TextBox x:Name="TextBoxAcceleration" HorizontalAlignment="Left" Height="24" Margin="722,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" MaxLength="3" BorderBrush="Black"/>
+        <CheckBox x:Name="CheckBoxFIA" Content="Approved by FIA" Height="24" Margin="20,86,636,0" VerticalAlignment="Top" BorderBrush="Black"/>
+        <ComboBox x:Name="ComboBoxTyres" HorizontalAlignment="Left" Height="25" Margin="88,365,0,0" VerticalAlignment="Top" Width="120">
             <ComboBoxItem Content="Hard (white)"/>
             <ComboBoxItem Content="Medium (yellow)"/>
             <ComboBoxItem Content="Soft (red)"/>
             <ComboBoxItem Content="Intermediate (green)"/>
             <ComboBoxItem Content="Wet (blue)"/>
         </ComboBox>
-        <TextBox x:Name="TextBoxNumber" HorizontalAlignment="Left" Height="24" Margin="102,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" RenderTransformOrigin="0.502,0.578" MaxLength="5"/>
-        <TextBox x:Name="TextBoxType" HorizontalAlignment="Left" Height="24" Margin="102,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="15" MaxLength="1"/>
-        <ComboBox x:Name="ComboBoxEngine" HorizontalAlignment="Left" Height="26" Margin="554,350,0,0" VerticalAlignment="Top" Width="200">
+        <TextBox x:Name="TextBoxNumber" HorizontalAlignment="Left" Height="24" Margin="115,18,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" RenderTransformOrigin="0.502,0.578" MaxLength="5" BorderBrush="#FF212121"/>
+        <TextBox x:Name="TextBoxType" HorizontalAlignment="Left" Height="24" Margin="115,53,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="15" MaxLength="1" BorderBrush="#FF212121"/>
+        <ComboBox x:Name="ComboBoxEngine" HorizontalAlignment="Left" Height="26" Margin="562,359,0,0" VerticalAlignment="Top" Width="200">
             <ComboBoxItem Content="Mercedes-Benz V6 hybrid turbocharger, 850+160hp"></ComboBoxItem>
             <ComboBoxItem Content="Red Bull V6 hybrid turbocharger, 880+110hp"></ComboBoxItem>
             <ComboBoxItem Content="Ferrari V6 hybrid turbocharger, 850+160hp"></ComboBoxItem>
@@ -37,24 +37,53 @@
             <ComboBoxItem Content="Honda V6 hybrid turbocharger, 750+150hp"></ComboBoxItem>
             <ComboBoxItem Content="Honda V6 hybrid turbocharger, 700+50hp"></ComboBoxItem>
         </ComboBox>
-        <ComboBox x:Name="ComboBoxAerodynamics" HorizontalAlignment="Left" Height="25" Margin="198,95,0,0" VerticalAlignment="Top" Width="220" RenderTransformOrigin="0.378,0.58">
+        <ComboBox x:Name="ComboBoxAerodynamics" HorizontalAlignment="Left" Height="25" Margin="198,95,0,0" VerticalAlignment="Top" Width="220" RenderTransformOrigin="0.378,0.58" BorderBrush="#FFACACAC">
             <ComboBoxItem Content="Wings, spoiler, diffuser, lightweight compounds, DRS"/>
             <ComboBoxItem Content="Wings, spoiler, diffuser, lightweight compounds"/>
             <ComboBoxItem Content="Wings, spoiler, diffuser"/>
             <ComboBoxItem Content="Wings, spoiler"/>
         </ComboBox>
-        <Button x:Name="ButtonBuild" Content="BUILD" HorizontalAlignment="Center" Height="40" Margin="0,378,0,0" VerticalAlignment="Top" Width="80" Click="ButtonBuild_Click" FontWeight="Bold"/>
-        <Label x:Name="LabelRaceCarControlHeader" Content="F1 CAR - FOR RACE" HorizontalAlignment="Left" Margin="2,2,0,0" VerticalAlignment="Top" FontWeight="Bold" FontStyle="Italic" FontSize="16"/>
-        <Label Content="Unique number" Margin="2,30,678,380"/>
-        <Label Content="Formula type" Margin="2,65,678,345"/>
-        <Label Content="F" HorizontalAlignment="Left" Margin="86,65,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="ButtonBuild" Content="BUILD" HorizontalAlignment="Left" Height="40" Margin="305,430,0,0" VerticalAlignment="Top" Width="80" Click="ButtonBuild_Click" FontWeight="Bold" BorderBrush="Black" Foreground="White">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border" BorderBrush="Black" Background="{TemplateBinding Background}">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="Red"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+            <Button.Background>
+                <SolidColorBrush Color="#FFB50000"/>
+            </Button.Background>
+        </Button>
+        <Label Content="Unique number" Margin="15,15,665,395"/>
+        <Label Content="Formula type" Margin="15,52,665,403"/>
+        <Label Content="F" HorizontalAlignment="Left" Margin="99,50,0,0" VerticalAlignment="Top"/>
         <Image Margin="40,140,40,130" Source="/GUI/f3_side.png"/>
-        <Line X1="50" Y1="50" X2="-50" Y2="200" Stroke="Red" StrokeThickness="1" Margin="140,240,226,0"/>
+        <Line X1="50" Y1="50" X2="-50" Y2="200" Stroke="Red" StrokeThickness="1" Margin="179,240,226,102"/>
         <Line X1="50" Y1="50" X2="200" Y2="200" Stroke="Red" StrokeThickness="1" Margin="464,158,-46,90"/>
-        <Line X1="50" Y1="-100" X2="-120" Y2="50" Stroke="Red" StrokeThickness="1" Margin="208,220,400,-113" RenderTransformOrigin="0.687,0.43"/>
+        <Line X1="50" Y1="-100" X2="-120" Y2="50" Stroke="Red" StrokeThickness="1" Margin="240,220,400,-106" RenderTransformOrigin="0.687,0.43"/>
         <Line X1="590" Y1="100" X2="1000" Y2="200" Stroke="Red" StrokeThickness="1" Margin="-232,20,56,126" />
-        <Label x:Name="LabelMaxSpeed" Content="Max speed (km/h)" Margin="594,30,50,380"/>
-        <Label x:Name="LabelAcceleration" Content="Acceleration (0-100km)" Margin="594,60,50,350"/>
-        <Label x:Name="LabelBrakes" Content="Brakes balance (in %)" Margin="594,89,50,321"/>
+        <Label x:Name="LabelMaxSpeed" Content="Max speed (km/h)" Margin="586,8,58,402"/>
+        <Label x:Name="LabelAcceleration" Content="Acceleration (0-100km)" Margin="586,38,58,372"/>
+        <Label x:Name="LabelBrakes" Content="Brakes balance (in %)" Margin="586,67,58,343"/>
+        <Button x:Name="ButtonCarList" Content="GARAGE" HorizontalAlignment="Left" Height="40" Margin="390,430,0,0" VerticalAlignment="Top" Width="80" Click="ButtonCarList_Click" FontWeight="Bold" Background="#FFB50000" Foreground="White" BorderBrush="Black">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border" BorderBrush="Black" Background="{TemplateBinding Background}">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="Red"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
     </Grid>
 </UserControl>

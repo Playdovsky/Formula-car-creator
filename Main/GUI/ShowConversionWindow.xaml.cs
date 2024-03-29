@@ -69,6 +69,7 @@ namespace Main
             ShowCar showCar = new ShowCar(Number, Type, Aerodynamics, Engine, Tyres, advertisers, location, forSale, price);
             RaceCar.cars.Add(showCar);
             MessageBox.Show("Conversion successful, car is now marked for show.");
+            Close();
         }
 
 

@@ -8,13 +8,26 @@
         Title="Conversion to show car" Height="400" Width="300">
     <Grid>
         <Label Content="Advertisers" HorizontalAlignment="Left" Margin="10,15,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="TextBoxAdvertiser" HorizontalAlignment="Left" Margin="10,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" Height="45"/>
-        <CheckBox x:Name="CheckBoxForSale" Content="For sale" HorizontalAlignment="Left" Margin="10,177,0,0" VerticalAlignment="Top" Width="64" Checked="CheckBoxForSale_Checked" Unchecked="CheckBoxForSale_Unchecked"/>
-        <Button x:Name="ButtonConvert" Content="Convert" HorizontalAlignment="Left" Height="30" Margin="10,322,0,0" VerticalAlignment="Top" Width="120" Click="ButtonConvert_Click"/>
+        <TextBox x:Name="TextBoxAdvertiser" HorizontalAlignment="Left" Margin="10,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" Height="45" BorderBrush="Black"/>
+        <CheckBox x:Name="CheckBoxForSale" Content="For sale" HorizontalAlignment="Left" Margin="10,177,0,0" VerticalAlignment="Top" Width="64" Checked="CheckBoxForSale_Checked" Unchecked="CheckBoxForSale_Unchecked" BorderBrush="Black"/>
+        <Button x:Name="ButtonConvert" Content="Convert" HorizontalAlignment="Left" Height="30" Margin="10,322,0,0" VerticalAlignment="Top" Width="120" Click="ButtonConvert_Click" Background="#FFB50000" Foreground="White" BorderBrush="Black" FontWeight="Bold">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border" BorderBrush="Black" Background="{TemplateBinding Background}">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="Red"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
         <Label Content="Where is located:" HorizontalAlignment="Left" Margin="10,98,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="TextBoxLocation" HorizontalAlignment="Left" Margin="10,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" Height="30"/>
+        <TextBox x:Name="TextBoxLocation" HorizontalAlignment="Left" Margin="10,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" Height="30" BorderBrush="Black"/>
         <Label x:Name="LabelPrice" Content="Price (in USD):" HorizontalAlignment="Left" Margin="10,213,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
-        <TextBox x:Name="TextBoxPrice" HorizontalAlignment="Left" Margin="10,239,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Visibility="Hidden"/>
+        <TextBox x:Name="TextBoxPrice" HorizontalAlignment="Left" Margin="10,239,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Visibility="Hidden" BorderBrush="Black"/>
 
     </Grid>
 </Window>

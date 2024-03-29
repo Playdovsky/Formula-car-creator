@@ -15,18 +15,87 @@
             <ColumnDefinition Width="465*"/>
             <ColumnDefinition Width="158*"/>
         </Grid.ColumnDefinitions>
-        <DataGrid x:Name="DataGridCars" HorizontalAlignment="Center" Height="285" VerticalAlignment="Top" Width="432" d:ItemsSource="{d:SampleData ItemCount=5}" IsReadOnly="True" SelectionMode="Single" MouseDoubleClick="DataGridCars_MouseDoubleClick" AutoGenerateColumns="False" HorizontalScrollBarVisibility="Disabled" Margin="0,1,0,0" Grid.Row="1">
+        <DataGrid x:Name="DataGridCars" HorizontalAlignment="Center" Height="285" VerticalAlignment="Top" Width="432" d:ItemsSource="{d:SampleData ItemCount=5}" IsReadOnly="True" SelectionMode="Single" MouseDoubleClick="DataGridCars_MouseDoubleClick" AutoGenerateColumns="False" HorizontalScrollBarVisibility="Disabled" Margin="0,1,0,0" Grid.Row="1" BorderBrush="Black" Background="White" HorizontalGridLinesBrush="Black" VerticalGridLinesBrush="Black">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Unqiue number" Binding="{Binding Number}"/>
                 <DataGridTextColumn Header="Formula" Binding="{Binding Type}"/>
                 <DataGridTextColumn Header="Engine" Binding="{Binding Engine}"/>
             </DataGrid.Columns>
+            <DataGrid.Resources>
+                <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" 
+                   Color="#FFB50000"/>
+            </DataGrid.Resources>
         </DataGrid>
-        <Button x:Name="ButtonConvert" Content="Damaged car" Margin="0,107,0,0" Padding="0" VerticalAlignment="Top" Height="30" Grid.Column="1" Grid.Row="1" IsCancel="True" Click="ButtonConvertDamaged_Click" HorizontalAlignment="Center" Width="138"/>
-        <Button x:Name="ButtonDelete" Content="Delete" Margin="0,256,0,0" Grid.Row="1" VerticalAlignment="Top" Height="30" Click="ButtonDelete_Click" Grid.Column="1" HorizontalAlignment="Center" Width="138"/>
+        <Button x:Name="ButtonConvert" Content="Damaged car" Margin="0,107,0,0" Padding="0" VerticalAlignment="Top" Height="30" Grid.Column="1" Grid.Row="1" IsCancel="True" Click="ButtonConvertDamaged_Click" HorizontalAlignment="Center" Width="138" Background="#FFB50000" Foreground="White" FontWeight="Bold" BorderBrush="Black">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border" BorderBrush="Black" Background="{TemplateBinding Background}">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="Red"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="ButtonDelete" Content="Delete" Margin="0,256,0,0" Grid.Row="1" VerticalAlignment="Top" Height="30" Click="ButtonDelete_Click" Grid.Column="1" HorizontalAlignment="Center" Width="138" Background="#FFB50000" Foreground="White" FontWeight="Bold" BorderBrush="Black">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border" BorderBrush="Black" Background="{TemplateBinding Background}">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="Red"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
         <Label x:Name="LabelConvert" Content="Convert to..." Margin="0,1,0,0" Grid.Row="1" Grid.Column="1" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-        <Button x:Name="ButtonRefresh" Grid.Column="1" Content="Refresh" HorizontalAlignment="Center" Margin="0,221,0,0" Grid.Row="1" VerticalAlignment="Top" Width="138" Height="30" Click="ButtonRefresh_Click"/>
-        <Button x:Name="ButtonConvertShow" Content="Show car" Margin="0,72,0,0" Padding="0" VerticalAlignment="Top" Height="30" Grid.Column="1" Grid.Row="1" Click="ButtonConvertShow_Click" IsCancel="True" HorizontalAlignment="Center" Width="138"/>
-        <Button x:Name="ButtonConvertRace" Grid.Column="1" Content="Race car" HorizontalAlignment="Center" Height="30" Margin="0,37,0,0" Grid.Row="1" VerticalAlignment="Top" Width="138" Click="ButtonConvertRace_Click"/>
+        <Button x:Name="ButtonRefresh" Grid.Column="1" Content="Refresh" HorizontalAlignment="Center" Margin="0,221,0,0" Grid.Row="1" VerticalAlignment="Top" Width="138" Height="30" Click="ButtonRefresh_Click" Background="#FFB50000" Foreground="White" FontWeight="Bold" BorderBrush="Black">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border" BorderBrush="Black" Background="{TemplateBinding Background}">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="Red"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="ButtonConvertShow" Content="Show car" Margin="0,72,0,0" Padding="0" VerticalAlignment="Top" Height="30" Grid.Column="1" Grid.Row="1" Click="ButtonConvertShow_Click" IsCancel="True" HorizontalAlignment="Center" Width="138" Background="#FFB50000" Foreground="White" FontWeight="Bold" BorderBrush="Black">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border" BorderBrush="Black" Background="{TemplateBinding Background}">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="Red"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="ButtonConvertRace" Grid.Column="1" Content="Race car" HorizontalAlignment="Center" Height="30" Margin="0,37,0,0" Grid.Row="1" VerticalAlignment="Top" Width="138" Click="ButtonConvertRace_Click" Background="#FFB50000" Foreground="White" FontWeight="Bold" BorderBrush="Black">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border" BorderBrush="Black" Background="{TemplateBinding Background}">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="Red"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
     </Grid>
 </Window>

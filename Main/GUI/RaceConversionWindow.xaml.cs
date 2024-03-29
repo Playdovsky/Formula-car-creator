@@ -60,6 +60,7 @@ namespace Main.GUI
             RaceCar race = new RaceCar(Number, Type, Aerodynamics, Engine, Tyres, brakesBalance, maxSpeed, acceleration, approvedByFIA);
             Cars.Add(race);
             MessageBox.Show("Conversion successfull, car is now marked for race.");
+            Close();
         }
     }
 }
