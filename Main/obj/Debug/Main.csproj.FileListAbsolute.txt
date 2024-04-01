@@ -26,3 +26,5 @@ C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Main\bin\Debug\Cl
 C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Main\bin\Debug\Class library.pdb
 C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Main\obj\Debug\GUI\RaceConversionWindow.g.cs
 C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Main\obj\Debug\GUI\RaceConversionWindow.baml
+C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Main\obj\Debug\GUI\StartControl.g.cs
+C:\Users\tubix\OneDrive\Documents\GitHub\Formula-1-car-creator\Main\obj\Debug\GUI\StartControl.baml

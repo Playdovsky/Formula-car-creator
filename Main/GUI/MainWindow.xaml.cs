@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using Main.GUI;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace Main
@@ -13,8 +14,16 @@ namespace Main
 
         private void InitializeContent()
         {
+            StartControl control = new StartControl();
+            ContentControl.Content = control;
+            LabelTitle.Visibility = Visibility.Hidden;
+        }
+
+        private void ContentControl_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
             RaceCarControl carControl = new RaceCarControl();
             ContentControl.Content = carControl;
+            LabelTitle.Visibility = Visibility.Visible;
         }
     }
 }

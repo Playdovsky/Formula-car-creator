@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Main"
         mc:Ignorable="d"
-        Title="Conversion to damaged car" Height="400" Width="300">
+        Title="Conversion to damaged car" Height="400" Width="300" ResizeMode="NoResize" Icon="../Resources/logo.ico">
     <Grid>
         <TextBox x:Name="TextBoxReasonConversion" HorizontalAlignment="Left" Margin="10,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="207" Height="80" BorderBrush="Black"/>
         <TextBox x:Name="TextBoxDamagedComponents" HorizontalAlignment="Left" Margin="10,149,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="207" Height="59" BorderBrush="Black"/>

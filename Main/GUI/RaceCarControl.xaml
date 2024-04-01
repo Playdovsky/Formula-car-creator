@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Main"
              mc:Ignorable="d" 
-             d:DesignHeight="480" d:DesignWidth="780"
+             d:DesignHeight="480" d:DesignWidth="800"
              Background="White">
     <Grid>
         <TextBox x:Name="TextBoxBrakes" HorizontalAlignment="Left" Height="24" Margin="722,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" MaxLength="4" BorderBrush="Black"/>
@@ -60,17 +60,17 @@
                 <SolidColorBrush Color="#FFB50000"/>
             </Button.Background>
         </Button>
-        <Label Content="Unique number" Margin="15,15,665,395"/>
-        <Label Content="Formula type" Margin="15,52,665,403"/>
+        <Label Content="Unique number" Margin="15,15,693,438"/>
+        <Label Content="Formula type" Margin="15,52,701,403"/>
         <Label Content="F" HorizontalAlignment="Left" Margin="99,50,0,0" VerticalAlignment="Top"/>
         <Image Margin="40,140,40,130" Source="/GUI/f3_side.png"/>
         <Line X1="50" Y1="50" X2="-50" Y2="200" Stroke="Red" StrokeThickness="1" Margin="179,240,226,102"/>
         <Line X1="50" Y1="50" X2="200" Y2="200" Stroke="Red" StrokeThickness="1" Margin="464,158,-46,90"/>
         <Line X1="50" Y1="-100" X2="-120" Y2="50" Stroke="Red" StrokeThickness="1" Margin="240,220,400,-106" RenderTransformOrigin="0.687,0.43"/>
         <Line X1="590" Y1="100" X2="1000" Y2="200" Stroke="Red" StrokeThickness="1" Margin="-232,20,56,126" />
-        <Label x:Name="LabelMaxSpeed" Content="Max speed (km/h)" Margin="586,8,58,402"/>
-        <Label x:Name="LabelAcceleration" Content="Acceleration (0-100km)" Margin="586,38,58,372"/>
-        <Label x:Name="LabelBrakes" Content="Brakes balance (in %)" Margin="586,67,58,343"/>
+        <Label x:Name="LabelMaxSpeed" Content="Max speed (km/h)" Margin="586,8,109,444"/>
+        <Label x:Name="LabelAcceleration" Content="Acceleration (0-100km)" Margin="586,38,78,418"/>
+        <Label x:Name="LabelBrakes" Content="Brakes balance (in %)" Margin="586,67,83,386"/>
         <Button x:Name="ButtonCarList" Content="GARAGE" HorizontalAlignment="Left" Height="40" Margin="390,430,0,0" VerticalAlignment="Top" Width="80" Click="ButtonCarList_Click" FontWeight="Bold" Background="#FFB50000" Foreground="White" BorderBrush="Black">
             <Button.Template>
                 <ControlTemplate TargetType="Button">

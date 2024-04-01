@@ -70,6 +70,9 @@
     <Compile Include="GUI\RaceConversionWindow.xaml.cs">
       <DependentUpon>RaceConversionWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="GUI\StartControl.xaml.cs">
+      <DependentUpon>StartControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Logic\Service.cs" />
     <Page Include="GUI\DamageConversionWindow.xaml">
       <SubType>Designer</SubType>
@@ -100,6 +103,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="GUI\RaceConversionWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\StartControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -141,6 +148,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="GUI\f3_side.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\logo.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

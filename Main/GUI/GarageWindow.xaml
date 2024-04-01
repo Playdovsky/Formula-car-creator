@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Main"
         mc:Ignorable="d"
-        Title="Garage" Height="345" Width="623">
+        Title="Garage" Height="345" Width="623" ResizeMode="NoResize" Icon="../Resources/logo.ico">
     <Grid Margin="0,0,0,-6">
         <Grid.RowDefinitions>
             <RowDefinition Height="16*"/>
